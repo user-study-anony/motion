@@ -32,10 +32,11 @@ const instructionsBtn = document.getElementById('instructions-btn');
 const instructionsPanel = document.getElementById('instructions');
 
 const QTEXT = {
-    q1_edit: 'Compared with the reference, which video makes the change the instruction asks for?',
+    q1_edit: 'Compared with the reference, which video makes the change the instruction asks for (including any direction of movement it names)?',
     q1_copy: 'Which video reproduces the reference performance more faithfully?',
     q2: 'Apart from the requested change, which video keeps the reference performance better (steps, rhythm, posture, arm swing)?',
-    q3: 'Which is the better result overall: the person and scene of the photo, natural motion, image quality?'
+    q3: 'Which video shows the person facing the same way as in the photo (front, side or back)?',
+    q4: 'All things considered (the instruction, the motion, the person and scene of the photo, image quality), which result is better?'
 };
 const OPTIONS = [['A', 'A better'], ['S', 'About the same'], ['B', 'B better']];
 
