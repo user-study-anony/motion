@@ -1,0 +1,485 @@
+{
+ "study": "ustudy-smoke-v1",
+ "version": "r3",
+ "note": "Pilot (smoke test) page data. Items and methods are opaque codes.",
+ "items": [
+  {
+   "id": "i01",
+   "kind": "copy",
+   "T": "a person walking forwards",
+   "I": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/ffebcd3614204679.jpg",
+   "R": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/f644b285774b6f92.mp4",
+   "clips": {
+    "bqr4": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/19744a32b30abea2.mp4",
+    "ed2q": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/90e57879780e0601.mp4",
+    "mn3u": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/4c592fec07b1e34b.mp4",
+    "rva9": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/75bc21deab3cdb8c.mp4",
+    "vwvy": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/26547d66f2f732c8.mp4"
+   }
+  },
+  {
+   "id": "i02",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/5e4976b3c92cff2a.jpg",
+   "R": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/244e8c9773b39a17.mp4",
+   "clips": {
+    "bqr4": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/8a5c3eb152a27c75.mp4",
+    "ed2q": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/6323e8ff6ac66c08.mp4",
+    "mn3u": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/349ec0be9722d888.mp4",
+    "rva9": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/003c2360da63187e.mp4",
+    "vwvy": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/51f1216ce3212edf.mp4"
+   }
+  },
+  {
+   "id": "i03",
+   "kind": "edit",
+   "T": "a person walking backwards",
+   "I": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/ffebcd3614204679.jpg",
+   "R": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/2e6e482278237335.mp4",
+   "clips": {
+    "bqr4": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/540d5d20316dbb06.mp4",
+    "ed2q": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/7822ec8b26c129a6.mp4",
+    "mn3u": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/45fab9963cb6ee07.mp4",
+    "rva9": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/bef5b62495ad731e.mp4",
+    "vwvy": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/92916d5ca34ba7e6.mp4"
+   }
+  },
+  {
+   "id": "i04",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping hands at chin level all the time",
+   "I": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/5e4976b3c92cff2a.jpg",
+   "R": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/1d02536ddcb4d783.mp4",
+   "clips": {
+    "bqr4": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/83e29a994e6920c6.mp4",
+    "ed2q": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/206843b887243e87.mp4",
+    "mn3u": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/7e06cf74a1b61b37.mp4",
+    "rva9": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/1e78e3dfc424665f.mp4",
+    "vwvy": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/19f5bc43632e7163.mp4"
+   }
+  },
+  {
+   "id": "i05",
+   "kind": "edit",
+   "T": "keep arms always down",
+   "I": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/5e4976b3c92cff2a.jpg",
+   "R": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/e0831b9b4c08e30d.mp4",
+   "clips": {
+    "bqr4": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/ef21e0ad60594cd4.mp4",
+    "ed2q": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/895d20132cb5bd45.mp4",
+    "mn3u": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/acf9361d613ed456.mp4",
+    "rva9": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/4bf485ad4bb5ed6a.mp4",
+    "vwvy": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/f845d48d55ea5fcf.mp4"
+   }
+  },
+  {
+   "id": "i06",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping both hands on the hips",
+   "I": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/ffebcd3614204679.jpg",
+   "R": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/f644b285774b6f92.mp4",
+   "clips": {
+    "bqr4": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/32f090d24a1a6528.mp4",
+    "ed2q": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/7f56a4a9546cb027.mp4",
+    "mn3u": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/0e115fb944f5ae23.mp4",
+    "rva9": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/8533d1b55e378359.mp4",
+    "vwvy": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/61a038019de7e459.mp4"
+   }
+  },
+  {
+   "id": "i07",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping both arms stretched straight forward",
+   "I": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/5e4976b3c92cff2a.jpg",
+   "R": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/1d02536ddcb4d783.mp4",
+   "clips": {
+    "bqr4": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/f74b5e8b9d220258.mp4",
+    "ed2q": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/8a37263950dc7492.mp4",
+    "mn3u": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/ceee4db198b87b93.mp4",
+    "rva9": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/e3643fb21c9c3de1.mp4",
+    "vwvy": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/331a5da990456a60.mp4"
+   }
+  },
+  {
+   "id": "i08",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping the head down",
+   "I": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/5e4976b3c92cff2a.jpg",
+   "R": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/7262a6b761a52b9e.mp4",
+   "clips": {
+    "bqr4": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/cc906734381c855a.mp4",
+    "ed2q": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/0da598be09bc1e74.mp4",
+    "mn3u": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/d013e5ae01a6f9bd.mp4",
+    "rva9": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/b7918832cd3f9d39.mp4",
+    "vwvy": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/2e4d059ac35c1bab.mp4"
+   }
+  },
+  {
+   "id": "i09",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping the head up",
+   "I": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/ffebcd3614204679.jpg",
+   "R": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/f644b285774b6f92.mp4",
+   "clips": {
+    "bqr4": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/8f5a82800966f020.mp4",
+    "ed2q": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/95e4ad2046a837aa.mp4",
+    "mn3u": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/d96d3a414f8ef909.mp4",
+    "rva9": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/8abfe2be00f4d1a5.mp4",
+    "vwvy": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/50f1fd376120c66d.mp4"
+   }
+  },
+  {
+   "id": "i10",
+   "kind": "edit",
+   "T": "a person walking forwards at a slower pace",
+   "I": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/ffebcd3614204679.jpg",
+   "R": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/2e6e482278237335.mp4",
+   "clips": {
+    "bqr4": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/a6eacf255b74251b.mp4",
+    "ed2q": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/9b8cfc8d935ddf38.mp4",
+    "mn3u": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/3ff97c858bdb32e4.mp4",
+    "rva9": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/1f6b6b1c477babdb.mp4",
+    "vwvy": "https://dit-scale-up.s3.us-west-2.amazonaws.com/fe-experiments/claude-mie-ustudy-WzWwWf/r3/clips/54df24fd3ebd3fd1.mp4"
+   }
+  }
+ ],
+ "comparisons": [
+  {
+   "id": "c01",
+   "item": "i09",
+   "pair": [
+    "mn3u",
+    "bqr4"
+   ]
+  },
+  {
+   "id": "c02",
+   "item": "i06",
+   "pair": [
+    "rva9",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c03",
+   "item": "i10",
+   "pair": [
+    "mn3u",
+    "vwvy"
+   ]
+  },
+  {
+   "id": "c04",
+   "item": "i04",
+   "pair": [
+    "mn3u",
+    "vwvy"
+   ]
+  },
+  {
+   "id": "c05",
+   "item": "i01",
+   "pair": [
+    "bqr4",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c06",
+   "item": "i03",
+   "pair": [
+    "mn3u",
+    "ed2q"
+   ]
+  },
+  {
+   "id": "c07",
+   "item": "i07",
+   "pair": [
+    "mn3u",
+    "bqr4"
+   ]
+  },
+  {
+   "id": "c08",
+   "item": "i09",
+   "pair": [
+    "vwvy",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c09",
+   "item": "i03",
+   "pair": [
+    "mn3u",
+    "vwvy"
+   ]
+  },
+  {
+   "id": "c10",
+   "item": "i05",
+   "pair": [
+    "ed2q",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c11",
+   "item": "i03",
+   "pair": [
+    "mn3u",
+    "bqr4"
+   ]
+  },
+  {
+   "id": "c12",
+   "item": "i02",
+   "pair": [
+    "mn3u",
+    "rva9"
+   ]
+  },
+  {
+   "id": "c13",
+   "item": "i03",
+   "pair": [
+    "rva9",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c14",
+   "item": "i06",
+   "pair": [
+    "bqr4",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c15",
+   "item": "i01",
+   "pair": [
+    "mn3u",
+    "vwvy"
+   ]
+  },
+  {
+   "id": "c16",
+   "item": "i08",
+   "pair": [
+    "mn3u",
+    "vwvy"
+   ]
+  },
+  {
+   "id": "c17",
+   "item": "i01",
+   "pair": [
+    "mn3u",
+    "ed2q"
+   ]
+  },
+  {
+   "id": "c18",
+   "item": "i04",
+   "pair": [
+    "mn3u",
+    "rva9"
+   ]
+  },
+  {
+   "id": "c19",
+   "item": "i09",
+   "pair": [
+    "ed2q",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c20",
+   "item": "i02",
+   "pair": [
+    "ed2q",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c21",
+   "item": "i08",
+   "pair": [
+    "mn3u",
+    "ed2q"
+   ]
+  },
+  {
+   "id": "c22",
+   "item": "i06",
+   "pair": [
+    "ed2q",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c23",
+   "item": "i02",
+   "pair": [
+    "mn3u",
+    "vwvy"
+   ]
+  },
+  {
+   "id": "c24",
+   "item": "i07",
+   "pair": [
+    "vwvy",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c25",
+   "item": "i01",
+   "pair": [
+    "mn3u",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c26",
+   "item": "i03",
+   "pair": [
+    "mn3u",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c27",
+   "item": "i08",
+   "pair": [
+    "bqr4",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c28",
+   "item": "i10",
+   "pair": [
+    "ed2q",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c29",
+   "item": "i05",
+   "pair": [
+    "mn3u",
+    "vwvy"
+   ]
+  },
+  {
+   "id": "c30",
+   "item": "i07",
+   "pair": [
+    "ed2q",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c31",
+   "item": "i04",
+   "pair": [
+    "ed2q",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c32",
+   "item": "i01",
+   "pair": [
+    "rva9",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c33",
+   "item": "i08",
+   "pair": [
+    "mn3u",
+    "rva9"
+   ]
+  },
+  {
+   "id": "c34",
+   "item": "i05",
+   "pair": [
+    "bqr4",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c35",
+   "item": "i05",
+   "pair": [
+    "rva9",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c36",
+   "item": "i04",
+   "pair": [
+    "bqr4",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c37",
+   "item": "i10",
+   "pair": [
+    "mn3u",
+    "rva9"
+   ]
+  },
+  {
+   "id": "c38",
+   "item": "i06",
+   "pair": [
+    "mn3u",
+    "vwvy"
+   ]
+  },
+  {
+   "id": "c39",
+   "item": "i10",
+   "pair": [
+    "mn3u",
+    "bqr4"
+   ]
+  },
+  {
+   "id": "c40",
+   "item": "i07",
+   "pair": [
+    "mn3u",
+    "rva9"
+   ]
+  },
+  {
+   "id": "c41",
+   "item": "i02",
+   "pair": [
+    "bqr4",
+    "mn3u"
+   ]
+  },
+  {
+   "id": "c42",
+   "item": "i09",
+   "pair": [
+    "mn3u",
+    "rva9"
+   ]
+  }
+ ]
+}
