@@ -75,15 +75,15 @@
             <div class="tb-right">
                 <span>Anonymous rater id: <code id="rater-id">&hellip;</code></span>
                 <span id="save-status" class="save-status">Progress saved</span>
-                <button type="button" id="instructions-btn" class="btn btn-outline-secondary btn-sm">Instructions</button>
-                <button type="button" id="export-btn" class="btn btn-link btn-sm">Export answers so far (JSON)</button>
+                <button type="button" id="instructions-btn" class="btn btn-outline-secondary btn-sm">Hide instructions</button>
+                <button type="button" id="export-btn" class="btn btn-link btn-sm" style="display: none;">Export answers so far (JSON)</button>
             </div>
         </div>
 
         <div class="pilot" id="pilot-banner"><strong>Pilot (smoke test).</strong> This run tests the page; its answers are not used as results.
             <span id="rater-hint"></span></div>
 
-        <div class="alert alert-info instructions" id="instructions" style="display: none;">
+        <div class="alert alert-info instructions" id="instructions" style="display: block;">
             <ol>
                 <li>Each screen shows, from left to right: a <strong>photo</strong> (a person in a scene; the first frame), a <strong>reference video</strong>
                     (a person performing a motion), and two generated videos, <strong>Video A</strong> and <strong>Video B</strong>. The text instruction is on top.</li>
@@ -94,7 +94,6 @@
                     <em>A better</em>, <em>About the same</em> or <em>B better</em>. If you are unsure, make your best judgment. If the two videos look
                     the same, choose <em>About the same</em>.</li>
                 <li><strong>Next</strong> becomes active once every question is answered; <strong>Previous</strong> goes back. Your progress is saved in this browser.</li>
-                <li>At the end, submit or download your answers (a JSON file), as the study organiser asked.</li>
             </ol>
         </div>
 
