@@ -9,7 +9,7 @@
 
     var SCHEMA = 'ustudy-smoke-payload/v1';
     var STATE_SCHEMA = 'ustudy-smoke-state/v1';
-    var QUESTIONS = ['q1', 'q2', 'q3'];
+    var QUESTIONS = ['q1', 'q2', 'q3', 'q4'];
     var ANSWERS = ['A', 'S', 'B'];          // A = left video better, S = about the same, B = right video better
 
     // Seeded PRNG: cyrb128 string hash -> sfc32 generator (deterministic per rater id).
@@ -61,7 +61,7 @@
         data.items.forEach(function (it) { m[it.id] = it; });
         return m;
     }
-    function questionsFor(item) { return item.kind === 'copy' ? ['q1', 'q3'] : ['q1', 'q2', 'q3']; }
+    function questionsFor(item) { return item.kind === 'copy' ? ['q1', 'q3', 'q4'] : ['q1', 'q2', 'q3', 'q4']; }
 
     // Every rater sees every comparison; order and sides are shuffled with the rater id as the seed.
     function buildPlan(data, rid) {
@@ -118,7 +118,7 @@
             var done = qs.every(function (q) { return ANSWERS.indexOf(a[q]) >= 0; });
             if (done) { nComplete++; }
             return { cmp: p.cmp, pos: p.pos, item: p.item, kind: items[p.item].kind, left: p.left, right: p.right,
-                     q1: a.q1 || null, q2: qs.indexOf('q2') >= 0 ? (a.q2 || null) : null, q3: a.q3 || null, complete: done,
+                     q1: a.q1 || null, q2: qs.indexOf('q2') >= 0 ? (a.q2 || null) : null, q3: a.q3 || null, q4: a.q4 || null, complete: done,
                      watch_ms: Math.round(state.watchMs[p.cmp] || 0), answered_utc: state.answeredUtc[p.cmp] || null };
         });
         return { schema: SCHEMA, study: data.study, version: data.version, rater_id: state.rid, rid_source: state.ridSource,
