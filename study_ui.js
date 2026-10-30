@@ -57,7 +57,10 @@ function isMobileDevice() {
 // Rater id: ?rid=... (anonymous code) or a random id kept in this browser.
 function resolveRid() {
     let param = null;
-    try { param = new URLSearchParams(window.location.search).get('rid'); } catch (e) { param = null; }
+    let pid = null;
+    try { const sp = new URLSearchParams(window.location.search); pid = sp.get('PROLIFIC_PID'); param = sp.get('rid'); } catch (e) { param = null; }
+    const fromPid = Core.sanitizeRid(pid);
+    if (fromPid) { return { rid: fromPid, source: 'prolific', note: '' }; }
     const fromUrl = Core.sanitizeRid(param);
     if (fromUrl) { return { rid: fromUrl, source: 'url', note: '' }; }
     let rid = Core.sanitizeRid(safeGet('rid'));
@@ -447,7 +450,10 @@ function downloadText(name, text) {
 }
 
 function currentPayload(mode) {
-    return Core.buildPayload(state, studyData, { userAgent: navigator.userAgent, nowIso: nowIso(), mode: mode });
+    const p = Core.buildPayload(state, studyData, { userAgent: navigator.userAgent, nowIso: nowIso(), mode: mode });
+    try { const sp = new URLSearchParams(window.location.search);
+          p.prolific = { pid: sp.get('PROLIFIC_PID'), study_id: sp.get('STUDY_ID'), session_id: sp.get('SESSION_ID') }; } catch (e) {}
+    return p;
 }
 
 function submitResponses() {
@@ -463,6 +469,10 @@ function submitResponses() {
             successDetail.textContent = res.mode === 'download'
                 ? `Your answers were saved as ${Core.payloadFilename(payload)}. Please send this file to the study organiser.`
                 : 'Your responses have been recorded.';
+            if (res.mode !== 'download' && CONFIG.prolificCompletionCode) {
+                successDetail.textContent = 'Your responses have been recorded. Returning you to Prolific...';
+                setTimeout(() => { window.location.href = 'https://app.prolific.com/submissions/complete?cc=' + encodeURIComponent(CONFIG.prolificCompletionCode); }, 1500);
+            }
         })
         .catch(error => {
             submitBtn.disabled = false;
@@ -487,9 +497,7 @@ document.addEventListener('visibilitychange', () => {
 document.addEventListener('DOMContentLoaded', async function () {
     const r = resolveRid();
     document.getElementById('rater-id').textContent = r.rid;
-    document.getElementById('rater-hint').textContent = r.source === 'generated'
-        ? (r.note || '') + ' To resume on another device, open this page with ?rid=' + r.rid
-        : '';
+    document.getElementById('rater-hint').textContent = '';
     studyData = await loadStudyData();
     if (!studyData) return;
     items = Core.itemIndex(studyData);
