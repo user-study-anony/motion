@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Comparison Study (pilot)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        /* One-row layout: photo | reference | A | B side by side, sized from the viewport width (no fixed widths: nothing can force a
+           horizontal scroll), and capped by the viewport height so the instruction line, the row, the questions and the navigation fit
+           on one screen at 1440-1920 px. */
+        :root { --gap: 10px; --aspect: 1.7333; --chrome: 360px; }
+        html, body { margin: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f1f3f5; }
+        .app { margin: 8px; padding: 8px 12px 10px 12px; background: #fff; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.08); min-width: 0; }
+        .topbar { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding-bottom: 6px; border-bottom: 1px solid #dee2e6; }
+        .tb-title { font-weight: 700; font-size: 1.05rem; white-space: nowrap; }
+        .tb-progress { flex: 1 1 260px; min-width: 160px; display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: #495057; }
+        .tb-progress .progress { flex: 1 1 auto; height: 8px; margin: 0; }
+        .tb-right { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: #6c757d; flex-wrap: wrap; }
+        .tb-right code { font-size: 0.8rem; }
+        .pilot { margin: 6px 0; padding: 3px 10px; font-size: 0.82rem; background: #fff3cd; border: 1px solid #ffe69c; border-radius: 6px; color: #664d03; }
+        .instructions { margin: 6px 0; padding: 8px 12px; font-size: 0.88rem; }
+        .instructions ol { padding-left: 1.3rem; margin: 0; }
+        .instructions li { margin-bottom: 0.2rem; line-height: 1.35; }
+        .t-line { margin: 6px 0 6px 0; padding: 5px 12px; background: #fff8e1; border: 1px solid #ffe69c; border-radius: 6px; font-size: 1.02rem;
+                  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .t-line .t-text { font-weight: 700; }
+        .row4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); margin: 0 auto;
+                max-width: calc((100vh - var(--chrome)) * var(--aspect) * 4 + 3 * var(--gap)); }
+        .tile { min-width: 0; text-align: center; }
+        .tile-label { display: inline-block; padding: 1px 10px; margin-bottom: 3px; border-radius: 4px; background: #0d6efd; color: #fff; font-weight: 600; font-size: 0.85rem; }
+        .tile-label.in { background: #6c757d; }
+        .video-wrapper { background: #000; border-radius: 6px; overflow: hidden; }
+        .video-wrapper video, .video-wrapper img { display: block; width: 100%; height: auto; aspect-ratio: 832 / 480; object-fit: contain; background: #000; }
+        .qblock, .t-line { margin-left: auto; margin-right: auto; max-width: calc((100vh - var(--chrome)) * var(--aspect) * 4 + 3 * var(--gap)); }
+        .qblock { margin-top: 8px; }
+        .qrow { display: flex; align-items: center; gap: 10px; padding: 4px 8px; margin-bottom: 4px; border: 1px solid #dee2e6; border-radius: 6px; background: #f8f9fa; }
+        .qtext { flex: 1 1 auto; min-width: 0; font-weight: 600; font-size: 0.92rem; color: #343a40; }
+        .qbtns { flex: 0 0 auto; display: flex; gap: 6px; }
+        .btn.option-button { min-width: 122px; min-height: 32px; padding: 3px 10px; font-size: 0.88rem; font-weight: 500; }
+        .option-button.selected { background-color: #0d6efd; border-color: #0d6efd; color: #fff; }
+        .navigation-buttons { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 8px 0 0 0; }
+        .navigation-buttons .btn { min-width: 140px; min-height: 38px; padding: 4px 16px; }
+        .navigation-buttons .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .next-btn-hint { text-align: right; color: #dc3545; font-size: 0.8rem; margin-top: 3px; display: none; font-weight: 500; }
+        .next-btn-hint.show { display: block; }
+        .save-status { opacity: 0; transition: opacity 0.3s ease; padding: 1px 6px; border-radius: 4px; font-size: 0.75rem; }
+        .save-status.visible { opacity: 1; }
+        .save-status.saved { background-color: #d1e7dd; color: #0a3622; }
+        #submission-form, #submission-success { margin-top: 14px; }
+        @media (max-width: 1100px) {            /* smaller screens: 2 x 2 tiles, wrapping questions (scrolling allowed there) */
+            .row4 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: none; }
+            .qblock, .t-line { max-width: none; }
+            .qrow { flex-wrap: wrap; }
+            .qbtns { flex: 1 1 100%; }
+            .btn.option-button { flex: 1 1 0; min-width: 0; }
+            .t-line { white-space: normal; }
+        }
+        @media (max-width: 560px) {
+            .app { margin: 0; border-radius: 0; padding: 8px 16px; }
+            .navigation-buttons .btn { min-width: 0; flex: 1; padding: 4px 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="app" id="app">
+        <div class="topbar">
+            <div class="tb-title">Video Comparison Study</div>
+            <div class="tb-progress">
+                <span id="progress-count">Comparison 1 of 0</span>
+                <div class="progress"><div class="progress-bar bg-primary" role="progressbar" id="progress-bar" style="width: 0%"></div></div>
+            </div>
+            <div class="tb-right">
+                <span>Anonymous rater id: <code id="rater-id">&hellip;</code></span>
+                <span id="save-status" class="save-status">Progress saved</span>
+                <button type="button" id="instructions-btn" class="btn btn-outline-secondary btn-sm">Instructions</button>
+                <button type="button" id="export-btn" class="btn btn-link btn-sm">Export answers so far (JSON)</button>
+            </div>
+        </div>
+
+        <div class="pilot" id="pilot-banner"><strong>Pilot (smoke test).</strong> This run tests the page; its answers are not used as results.
+            <span id="rater-hint"></span></div>
+
+        <div class="alert alert-info instructions" id="instructions" style="display: none;">
+            <ol>
+                <li>Each screen shows, from left to right: a <strong>photo</strong> (a person in a scene; the first frame), a <strong>reference video</strong>
+                    (a person performing a motion), and two generated videos, <strong>Video A</strong> and <strong>Video B</strong>. The text instruction is on top.</li>
+                <li>Video A and Video B were made by two different methods. Each one animates the person in the photo so that they perform the motion of
+                    the reference video, changed the way the text instruction asks. When the instruction only asks to perform the reference motion,
+                    nothing should change: the video should reproduce the reference.</li>
+                <li>The three videos play together in a loop; <strong>Play from start</strong> restarts them together. Answer each question with
+                    <em>A better</em>, <em>About the same</em> or <em>B better</em>. If you are unsure, make your best judgment. If the two videos look
+                    the same, choose <em>About the same</em>.</li>
+                <li><strong>Next</strong> becomes active once every question is answered; <strong>Previous</strong> goes back. Your progress is saved in this browser.</li>
+                <li>At the end, submit or download your answers (a JSON file), as the study organiser asked.</li>
+            </ol>
+        </div>
+
+        <div id="comparison-container"></div>
+
+        <div class="navigation-buttons">
+            <button type="button" id="prev-btn" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Previous</button>
+            <button type="button" id="replay-btn" class="btn btn-outline-dark"><i class="bi bi-arrow-counterclockwise"></i> Play from start</button>
+            <button type="button" id="next-btn" class="btn btn-primary" disabled>Next <i class="bi bi-arrow-right"></i></button>
+        </div>
+        <div class="next-btn-hint" id="next-btn-hint"><i class="bi bi-exclamation-circle"></i> Please answer every question to proceed</div>
+
+        <div id="submission-form" style="display: none;">
+            <h4 class="text-center mb-2">All comparisons answered</h4>
+            <p class="text-center" id="submit-explain"></p>
+            <div class="text-center">
+                <button type="button" id="submit-btn" class="btn btn-success btn-lg">Submit answers</button>
+            </div>
+            <p class="text-center mt-2" id="submit-status"></p>
+        </div>
+
+        <div id="submission-success" class="alert alert-success" style="display: none;">
+            <h4 class="text-center"><i class="bi bi-check-circle-fill"></i> Thank you for participating!</h4>
+            <p class="text-center mb-0" id="success-detail">Your responses have been recorded.</p>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="study_core.js"></script>
+    <script src="study_ui.js"></script>
+</body>
+</html>
