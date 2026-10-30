@@ -34,7 +34,7 @@ const instructionsPanel = document.getElementById('instructions');
 const QTEXT = {
     q1_edit: 'Compared with the reference, which video makes the change the instruction asks for (including any direction of movement it names)?',
     q1_copy: 'Which video reproduces the reference performance more faithfully?',
-    q2: 'Apart from the requested change, which video keeps the reference performance better (steps, rhythm, posture, arm swing)?',
+    q2: 'Apart from the requested change, which video keeps the reference motion better (steps, rhythm, posture, arm swing)?',
     q3: 'Which video shows the person facing the same way as in the photo (front, side or back)?',
     q4: 'All things considered (the instruction, the motion, the person and scene of the photo, image quality), which result is better?'
 };
@@ -466,7 +466,7 @@ function submitResponses() {
         })
         .catch(error => {
             submitBtn.disabled = false;
-            submitStatus.textContent = 'Submission failed (' + error.message + '). Your answers are kept in this browser; use "Export answers so far" below to save them as a file.';
+            submitStatus.textContent = 'Submission failed (' + error.message + '). Please try again. If it keeps failing, use "Export answers so far" at the top to save your answers as a file.'; exportBtn.style.display = '';
         });
 }
 
