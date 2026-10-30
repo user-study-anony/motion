@@ -40,6 +40,11 @@ const QTEXT = {
 };
 const OPTIONS = [['A', 'A better'], ['S', 'About the same'], ['B', 'B better']];
 
+const MIN_WATCH_MS = (window.STUDY_CONFIG && window.STUDY_CONFIG.minWatchMs) || 4000;
+function showGate(which) {
+    document.getElementById('gate').style.display = 'block';
+    ['gate-mobile', 'gate-consent'].forEach(id => { document.getElementById(id).style.display = id === which ? 'block' : 'none'; });
+}
 function nowIso() { return new Date().toISOString(); }
 function nowMs() { return Date.now(); }
 
@@ -152,6 +157,17 @@ function renderComparison(index) {
     document.querySelectorAll('.option-button').forEach(button => {
         button.addEventListener('click', function () { selectAnswer(this.dataset.question, this.dataset.value); });
     });
+    const answeredBefore = Object.keys(ans).length > 0;
+    if (!answeredBefore && MIN_WATCH_MS > 0) {
+        const btns = Array.from(document.querySelectorAll('.option-button'));
+        btns.forEach(b => { b.disabled = true; });
+        const lockHint = document.createElement('div');
+        lockHint.className = 'watch-hint'; lockHint.style.cssText = 'text-align:center;color:#666;margin:6px 0;';
+        lockHint.textContent = 'Please watch the videos; the answer buttons unlock in a few seconds.';
+        const qb = document.querySelector('.qblock'); if (qb && qb.parentNode) qb.parentNode.insertBefore(lockHint, qb);
+        const myCmp = p.cmp;
+        setTimeout(() => { if (currentPlan().cmp !== myCmp) return; btns.forEach(b => { b.disabled = false; }); if (lockHint.parentNode) lockHint.parentNode.removeChild(lockHint); }, MIN_WATCH_MS);
+    }
 
     synchronizeVideos();
     updateUIState();
@@ -453,6 +469,8 @@ function currentPayload(mode) {
     const p = Core.buildPayload(state, studyData, { userAgent: navigator.userAgent, nowIso: nowIso(), mode: mode });
     try { const sp = new URLSearchParams(window.location.search);
           p.prolific = { pid: sp.get('PROLIFIC_PID'), study_id: sp.get('STUDY_ID'), session_id: sp.get('SESSION_ID') }; } catch (e) {}
+    p.consent_utc = state.consentUtc || null;
+    p.min_watch_ms = MIN_WATCH_MS;
     return p;
 }
 
@@ -470,7 +488,7 @@ function submitResponses() {
                 ? `Your answers were saved as ${Core.payloadFilename(payload)}. Please send this file to the study organiser.`
                 : 'Your responses have been recorded.';
             if (res.mode !== 'download' && CONFIG.prolificCompletionCode) {
-                successDetail.textContent = 'Your responses have been recorded. Returning you to Prolific...';
+                successDetail.textContent = 'Your responses have been recorded. Returning you to Prolific... If you are not redirected, enter this completion code on Prolific: ' + CONFIG.prolificCompletionCode;
                 setTimeout(() => { window.location.href = 'https://app.prolific.com/submissions/complete?cc=' + encodeURIComponent(CONFIG.prolificCompletionCode); }, 1500);
             }
         })
@@ -502,6 +520,22 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (!studyData) return;
     items = Core.itemIndex(studyData);
     state = loadProgress(r.rid) || Core.newState(studyData, r.rid, r.source, nowIso());
+    if (state.finished) {
+        document.getElementById('comparison-container').style.display = 'none';
+        submissionSuccess.style.display = 'block';
+        successDetail.textContent = 'You have already submitted this study. Thank you!' + (CONFIG.prolificCompletionCode ? ' Your completion code is ' + CONFIG.prolificCompletionCode + '.' : '');
+        return;
+    }
+    if (isMobileDevice() || (window.innerWidth && window.innerWidth < 900)) { showGate('gate-mobile'); return; }
+    if (!state.consentUtc) {
+        await new Promise(resolve => {
+            showGate('gate-consent');
+            const chk = document.getElementById('consent-check'), yes = document.getElementById('consent-yes'); yes.disabled = !chk.checked;
+            chk.addEventListener('change', () => { yes.disabled = !chk.checked; });
+            yes.addEventListener('click', () => { state.consentUtc = nowIso(); saveProgress(true); document.getElementById('gate').style.display = 'none'; resolve(); });
+            document.getElementById('consent-no').addEventListener('click', () => { document.getElementById('consent-no-msg').style.display = 'block'; yes.disabled = true; chk.disabled = true; });
+        });
+    }
     if (state.idx >= state.plan.length) state.idx = state.plan.length - 1;
     prevBtn.addEventListener('click', goToPrevious);
     nextBtn.addEventListener('click', goToNext);
