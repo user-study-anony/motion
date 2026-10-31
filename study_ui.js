@@ -42,6 +42,8 @@ const OPTIONS = [['A', 'A better'], ['S', 'About the same'], ['B', 'B better']];
 
 const MIN_WATCH_MS = (window.STUDY_CONFIG && window.STUDY_CONFIG.minWatchMs) || 4000;
 function showGate(which) {
+    const fromProlific = /[?&]PROLIFIC_PID=/.test(window.location.search || '');
+    document.querySelectorAll('.if-prolific').forEach(e => { e.style.display = fromProlific ? 'inline' : 'none'; });
     document.getElementById('gate').style.display = 'block';
     ['gate-mobile', 'gate-consent'].forEach(id => { document.getElementById(id).style.display = id === which ? 'block' : 'none'; });
 }
@@ -487,7 +489,7 @@ function submitResponses() {
             successDetail.textContent = res.mode === 'download'
                 ? `Your answers were saved as ${Core.payloadFilename(payload)}. Please send this file to the study organiser.`
                 : 'Your responses have been recorded.';
-            if (res.mode !== 'download' && CONFIG.prolificCompletionCode) {
+            if (res.mode !== 'download' && CONFIG.prolificCompletionCode && state.ridSource === 'prolific') {
                 successDetail.textContent = 'Your responses have been recorded. Returning you to Prolific... If you are not redirected, enter this completion code on Prolific: ' + CONFIG.prolificCompletionCode;
                 setTimeout(() => { window.location.href = 'https://app.prolific.com/submissions/complete?cc=' + encodeURIComponent(CONFIG.prolificCompletionCode); }, 1500);
             }
@@ -523,7 +525,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (state.finished) {
         document.getElementById('comparison-container').style.display = 'none';
         submissionSuccess.style.display = 'block';
-        successDetail.textContent = 'You have already submitted this study. Thank you!' + (CONFIG.prolificCompletionCode ? ' Your completion code is ' + CONFIG.prolificCompletionCode + '.' : '');
+        successDetail.textContent = 'You have already submitted this study. Thank you!' + (CONFIG.prolificCompletionCode && state.ridSource === 'prolific' ? ' Your completion code is ' + CONFIG.prolificCompletionCode + '.' : '');
         return;
     }
     if (isMobileDevice() || (window.innerWidth && window.innerWidth < 900)) { showGate('gate-mobile'); return; }
