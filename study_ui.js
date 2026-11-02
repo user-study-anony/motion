@@ -40,7 +40,7 @@ const QTEXT = {
 };
 const OPTIONS = [['A', 'A better'], ['S', 'About the same'], ['B', 'B better']];
 
-const MIN_WATCH_MS = (window.STUDY_CONFIG && window.STUDY_CONFIG.minWatchMs) || 4000;
+const MIN_WATCH_MS = (window.STUDY_CONFIG && typeof window.STUDY_CONFIG.minWatchMs === 'number') ? window.STUDY_CONFIG.minWatchMs : 0;   // owner 11/01: no minimum watch time (0 = answer at once)
 function showGate(which) {
     const fromProlific = /[?&]PROLIFIC_PID=/.test(window.location.search || '');
     document.querySelectorAll('.if-prolific').forEach(e => { e.style.display = fromProlific ? 'inline' : 'none'; });
