@@ -34,7 +34,7 @@ const instructionsPanel = document.getElementById('instructions');
 const QTEXT = {
     q1_edit: 'Which video better follows the text instruction (including any direction of movement it names)?',
     q1_copy: 'Which video better follows the text instruction (including any direction of movement it names)?',
-    q2: 'Apart from the change the instruction asks for, which video better follows the reference motion (steps, rhythm, posture, arm swing)?',
+    q2: 'Apart from the change the instruction asks for, which video better keeps the rest of the reference motion?',
     q2_copy: 'Which video better follows the reference motion (steps, rhythm, posture, arm swing)?',
     q3: 'Apart from turns that the reference performer makes, which video keeps the person facing the same way as in the photo (front, side or back)?',
     q4: 'All things considered (the instruction, the motion, the person and scene of the photo, image quality), which result is better?'
@@ -173,12 +173,30 @@ function renderComparison(index) {
     }
 
     synchronizeVideos();
+    ['reference-video', 'video-a', 'video-b'].forEach(id => {   // playback log: did each video play, or fail to load (recorded only)
+        try {
+            const v = document.getElementById(id); if (!v || !v.addEventListener) return;
+            v.addEventListener('playing', () => noteMedia(p.cmp, id, 'played'));
+            v.addEventListener('error', () => noteMedia(p.cmp, id, 'error'));
+            const src = v.querySelector && v.querySelector('source'); if (src && src.addEventListener) src.addEventListener('error', () => noteMedia(p.cmp, id, 'error'));
+        } catch (e) {}
+    });
     updateUIState();
     if (document.visibilityState !== 'hidden') { Core.enter(state, p.cmp, nowMs()); }
 }
 
 // One play/restart control: the reference and both outputs restart together from the first frame.
+function noteMedia(cmp, id, what) {
+    try {
+        state.media = state.media || {};
+        const m = state.media[cmp] = state.media[cmp] || {};
+        const k = { 'reference-video': 'R', 'video-a': 'A', 'video-b': 'B' }[id] || id;
+        if (m[k] === what || m[k] === 'error') return;
+        m[k] = what; saveProgress();
+    } catch (e) {}
+}
 function replayAll() {
+    { const h = document.getElementById('autoplay-hint'); if (h) h.classList.remove('show'); }
     const vids = ['reference-video', 'video-a', 'video-b'].map(id => document.getElementById(id)).filter(Boolean);
     const m = window._pairwiseSync && window._pairwiseSync.manager;
     if (m) m.isRestarting = true;
@@ -257,19 +275,18 @@ function synchronizeVideos() {
             return video.currentTime >= (duration - 0.2);
         } catch (e) { return false; }
     }
-    function playAllWithRetry(attempt = 0) {
+    function playAllWithRetry(attempt = 0) {   // retries refused play() promises too; after the last try asks the rater to press Play from start
         const MAX_ATTEMPT = 4;
-        let anyRejected = false;
+        const ps = [];
         manager.videos.forEach(v => {
-            try {
-                try { v.muted = true; v.playsInline = true; } catch (e) {}
-                const p = v.play();
-                if (p && typeof p.then === 'function') { p.catch(() => { anyRejected = true; }); }
-            } catch (err) { anyRejected = true; }
+            try { v.muted = true; v.playsInline = true; } catch (e) {}
+            try { const p = v.play(); if (p && typeof p.then === 'function') ps.push(p); } catch (err) { ps.push(Promise.reject(err)); }
         });
-        if (anyRejected && attempt < MAX_ATTEMPT) {
-            setTimeout(() => playAllWithRetry(attempt + 1), 200 * Math.pow(2, attempt));
-        }
+        Promise.allSettled(ps).then(rs => {
+            const h = document.getElementById('autoplay-hint');
+            if (!rs.some(r => r.status === 'rejected')) { if (h) h.classList.remove('show'); return; }
+            if (attempt < MAX_ATTEMPT) { setTimeout(() => playAllWithRetry(attempt + 1), 200 * Math.pow(2, attempt)); } else if (h) { h.classList.add('show'); }
+        });
     }
     function restartAll() {
         try {
@@ -359,7 +376,8 @@ function updateUIState() {
     nextBtn.innerHTML = last ? 'Finish <i class="bi bi-check-circle"></i>' : 'Next <i class="bi bi-arrow-right"></i>';
     if (hint) {
         hint.innerHTML = `<i class="bi bi-exclamation-circle"></i> Please answer every question to ${last ? 'finish' : 'proceed'}`;
-        if (allAnswered) { hint.classList.remove('show'); } else { hint.classList.add('show'); }
+        const anyAnswered = Object.keys(state.answers[p.cmp] || {}).length > 0;   // no red warning before the first click
+        if (allAnswered || !anyAnswered) { hint.classList.remove('show'); } else { hint.classList.add('show'); }
     }
     prevBtn.disabled = state.idx === 0;
 }
@@ -474,6 +492,7 @@ function currentPayload(mode) {
           p.prolific = { pid: sp.get('PROLIFIC_PID'), study_id: sp.get('STUDY_ID'), session_id: sp.get('SESSION_ID') }; } catch (e) {}
     p.consent_utc = state.consentUtc || null;
     p.min_watch_ms = MIN_WATCH_MS;
+    p.media = state.media || {};   // per comparison: R / A (left) / B (right) -> 'played' | 'error'
     return p;
 }
 
@@ -490,6 +509,10 @@ function submitResponses() {
             successDetail.textContent = res.mode === 'download'
                 ? `Your answers were saved as ${Core.payloadFilename(payload)}. Please send this file to the study organiser.`
                 : 'Your responses have been recorded.';
+            prevBtn.style.display = 'none';   // nothing to go back to after submitting
+            if (res.mode !== 'download' && CONFIG.prolificCompletionCode && state.ridSource !== 'prolific') {
+                successDetail.textContent = 'Your responses have been recorded. If you came from Prolific, enter this completion code on Prolific: ' + CONFIG.prolificCompletionCode;
+            }
             if (res.mode !== 'download' && CONFIG.prolificCompletionCode && state.ridSource === 'prolific') {
                 successDetail.textContent = 'Your responses have been recorded. Returning you to Prolific... If you are not redirected, enter this completion code on Prolific: ' + CONFIG.prolificCompletionCode;
                 setTimeout(() => { window.location.href = 'https://app.prolific.com/submissions/complete?cc=' + encodeURIComponent(CONFIG.prolificCompletionCode); }, 1500);
@@ -526,6 +549,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (state.finished) {
         document.getElementById('comparison-container').style.display = 'none';
         submissionSuccess.style.display = 'block';
+        prevBtn.style.display = 'none';
         successDetail.textContent = 'You have already submitted this study. Thank you!' + (CONFIG.prolificCompletionCode && state.ridSource === 'prolific' ? ' Your completion code is ' + CONFIG.prolificCompletionCode + '.' : '');
         return;
     }

@@ -109,7 +109,7 @@
                 <li>Each screen shows, from left to right: a <strong>photo</strong> (a person in a scene; the first frame), a <strong>reference video</strong>
                     (a person performing a motion), and two generated videos, <strong>Video A</strong> and <strong>Video B</strong>. The text instruction is on top.</li>
                 <li>Video A and Video B were made by two different video editing methods. Each one makes the person in the photo perform the motion of
-                    the reference video, changed the way the text instruction asks (for example "walk backwards" or "keep both arms down"). When the
+                    the reference video, changed the way the text instruction asks (for example a change of direction, speed or arm position). When the
                     instruction only asks to perform the reference motion, nothing should change: the video should copy the reference motion (those screens
                     have no separate question about the instruction).
                     A good video:
@@ -117,7 +117,9 @@
                         <li>does what the text instruction asks;</li>
                         <li>apart from that change, moves like the reference performer (same steps, rhythm, posture, arm swing);</li>
                         <li>keeps the person, clothes and scene of the photo, with the person facing the same way as in the photo (front, side or back).
-                            If the reference performer turns during the video, the person should make the same turn: that is correct, not a change of view;</li>
+                            If the reference performer turns during the video, the person should make the same turn: that is correct, not a change of view.
+                            The reference may be filmed from a different angle, and its camera may move; the video should keep the view of the photo and does not
+                            need to copy the camera of the reference;</li>
                         <li>looks natural, without distorted bodies, flicker or other visual errors.</li>
                     </ul></li>
                 <li>The three videos play together in a loop; <strong>Play from start</strong> restarts them together. Answer each question with
@@ -135,6 +137,7 @@
             <button type="button" id="next-btn" class="btn btn-primary" disabled>Next <i class="bi bi-arrow-right"></i></button>
         </div>
         <div class="next-btn-hint" id="next-btn-hint"><i class="bi bi-exclamation-circle"></i> Please answer every question to proceed</div>
+        <div class="next-btn-hint" id="autoplay-hint" style="text-align: center;"><i class="bi bi-play-circle"></i> Your browser paused the videos. Click <strong>Play from start</strong> to play them.</div>
 
         <div id="submission-form" style="display: none;">
             <h4 class="text-center mb-2">All comparisons answered</h4>
