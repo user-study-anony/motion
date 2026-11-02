@@ -24,6 +24,8 @@
         .instructions { margin: 6px 0; padding: 8px 12px; font-size: 0.88rem; }
         .instructions ol { padding-left: 1.3rem; margin: 0; }
         .instructions li { margin-bottom: 0.2rem; line-height: 1.35; }
+        .instructions ul { padding-left: 1.2rem; margin: 0.15rem 0 0; }
+        .instructions ul li { margin-bottom: 0.05rem; }
         .t-line { margin: 6px 0 6px 0; padding: 5px 12px; background: #fff8e1; border: 1px solid #ffe69c; border-radius: 6px; font-size: 1.02rem;
                   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .t-line .t-text { font-weight: 700; }
@@ -106,10 +108,17 @@
             <ol>
                 <li>Each screen shows, from left to right: a <strong>photo</strong> (a person in a scene; the first frame), a <strong>reference video</strong>
                     (a person performing a motion), and two generated videos, <strong>Video A</strong> and <strong>Video B</strong>. The text instruction is on top.</li>
-                <li>Video A and Video B were made by two different methods. Each one animates the person in the photo so that they perform the motion of
-                    the reference video, changed the way the text instruction asks. When the instruction only asks to perform the reference motion,
-                    nothing should change: the video should reproduce the reference. If the performer in the reference turns, the person should turn
-                    the same way; that does not count as a change of view.</li>
+                <li>Video A and Video B were made by two different video editing methods. Each one makes the person in the photo perform the motion of
+                    the reference video, changed the way the text instruction asks (for example "walk backwards" or "keep both arms down"). When the
+                    instruction only asks to perform the reference motion, nothing should change: the video should copy the reference motion.
+                    A good video:
+                    <ul>
+                        <li>does what the text instruction asks;</li>
+                        <li>apart from that change, moves like the reference performer (same steps, rhythm, posture, arm swing);</li>
+                        <li>keeps the person, clothes and scene of the photo, with the person facing the same way as in the photo (front, side or back).
+                            If the reference performer turns during the video, the person should make the same turn: that is correct, not a change of view;</li>
+                        <li>looks natural, without distorted bodies, flicker or other visual errors.</li>
+                    </ul></li>
                 <li>The three videos play together in a loop; <strong>Play from start</strong> restarts them together. Answer each question with
                     <em>A better</em>, <em>About the same</em> or <em>B better</em>. If you are unsure, make your best judgment. If the two videos look
                     the same, choose <em>About the same</em>.</li>
