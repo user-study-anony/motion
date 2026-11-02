@@ -34,7 +34,8 @@ const instructionsPanel = document.getElementById('instructions');
 const QTEXT = {
     q1_edit: 'Which video better follows the text instruction (including any direction of movement it names)?',
     q1_copy: 'Which video better follows the text instruction (including any direction of movement it names)?',
-    q2: 'Apart from any change the instruction asks for, which video better follows the reference motion (steps, rhythm, posture, arm swing)?',
+    q2: 'Apart from the change the instruction asks for, which video better follows the reference motion (steps, rhythm, posture, arm swing)?',
+    q2_copy: 'Which video better follows the reference motion (steps, rhythm, posture, arm swing)?',
     q3: 'Apart from turns that the reference performer makes, which video keeps the person facing the same way as in the photo (front, side or back)?',
     q4: 'All things considered (the instruction, the motion, the person and scene of the photo, image quality), which result is better?'
 };
@@ -151,7 +152,7 @@ function renderComparison(index) {
             <div class="tile"><div class="tile-label">Video B</div><div class="video-wrapper">${vid('video-b', urlB)}</div></div>
         </div>`;
     const rows = qs.map(q => {
-        const text = q === 'q1' ? (item.kind === 'copy' ? QTEXT.q1_copy : QTEXT.q1_edit) : QTEXT[q];
+        const text = q === 'q1' ? (item.kind === 'copy' ? QTEXT.q1_copy : QTEXT.q1_edit) : (q === 'q2' && item.kind === 'copy' ? QTEXT.q2_copy : QTEXT[q]);
         return `<div class="qrow"><div class="qtext">${escapeHTML(text)}</div><div class="qbtns">${optionButtons(q, ans[q])}</div></div>`;
     }).join('');
     comparisonContainer.innerHTML = `${rowHTML}<div class="qblock">${rows}</div>`;
