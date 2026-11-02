@@ -386,6 +386,7 @@ function showComparisonView() {
 function goToPrevious() {
     if (onSubmissionForm) {
         showComparisonView();
+        toggleInstructions(true);   // owner 11/01: instructions open by default on every page
         renderComparison(state.idx);
         updateProgressBar();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -395,6 +396,7 @@ function goToPrevious() {
     if (state.idx > 0) {
         Core.leave(state, nowMs());
         state.idx--;
+        toggleInstructions(true);   // owner 11/01: instructions open by default on every page
         renderComparison(state.idx);
         updateProgressBar();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -411,7 +413,7 @@ function goToNext() {
     Core.leave(state, nowMs());
     if (state.idx < state.plan.length - 1) {
         state.idx++;
-        toggleInstructions(false);
+        toggleInstructions(true);   // owner 11/01: instructions open by default on every page
         renderComparison(state.idx);
         updateProgressBar();
         preloadNextVideos(state.idx + 1);
@@ -545,7 +547,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     exportBtn.addEventListener('click', exportAnswers);
     replayBtn.addEventListener('click', replayAll);
     instructionsBtn.addEventListener('click', () => toggleInstructions());
-    toggleInstructions(Object.keys(state.answers).length === 0);
+    toggleInstructions(true);   // owner 11/01: instructions open by default on every page (also after a reload)
     renderComparison(state.idx);
     updateProgressBar();
     preloadNextVideos(state.idx + 1);
