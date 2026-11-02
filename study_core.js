@@ -61,7 +61,7 @@
         data.items.forEach(function (it) { m[it.id] = it; });
         return m;
     }
-    function questionsFor(item) { return ['q1', 'q2', 'q3', 'q4']; }   // owner 11/01: the same four questions on every screen (copy and edit)
+    function questionsFor(item) { return item.kind === 'copy' ? ['q2', 'q3', 'q4'] : ['q1', 'q2', 'q3', 'q4']; }   // owner 11/01: one question per concept; copy screens have no instruction question (q2 = reference motion on every screen)
 
     // Every rater sees every comparison; order and sides are shuffled with the rater id as the seed.
     function buildPlan(data, rid) {
