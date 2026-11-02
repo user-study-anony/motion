@@ -187,9 +187,7 @@ function replayAll() {
 }
 
 function toggleInstructions(show) {
-    const open = typeof show === 'boolean' ? show : instructionsPanel.style.display === 'none';
-    instructionsPanel.style.display = open ? 'block' : 'none';
-    instructionsBtn.textContent = open ? 'Hide instructions' : 'Instructions';
+    instructionsPanel.style.display = 'block';   // owner 11/01: instructions always shown; no hide button
 }
 
 function selectAnswer(question, value) {
@@ -546,7 +544,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     submitBtn.addEventListener('click', submitResponses);
     exportBtn.addEventListener('click', exportAnswers);
     replayBtn.addEventListener('click', replayAll);
-    instructionsBtn.addEventListener('click', () => toggleInstructions());
     toggleInstructions(true);   // owner 11/01: instructions open by default on every page (also after a reload)
     renderComparison(state.idx);
     updateProgressBar();
