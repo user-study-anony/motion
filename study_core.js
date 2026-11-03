@@ -61,7 +61,7 @@
         data.items.forEach(function (it) { m[it.id] = it; });
         return m;
     }
-    function questionsFor(item) { return item.kind === 'copy' ? ['q2', 'q3', 'q5'] : ['q1', 'q2', 'q3', 'q4', 'q5']; }   // one question per concept: copy screens have no instruction question (11/01); q4 = both, edit screens only, and q5 = overall on every screen (11/03)
+    function questionsFor(item) { return item.kind === 'copy' ? ['q2', 'q3', 'q5'] : ['q1', 'q2', 'q4', 'q3', 'q5']; }   // display order. One question per concept: copy screens have no instruction question (11/01); q4 = both, edit screens only, shown right after q1 and q2; q5 = overall on every screen (11/03)
 
     // Every rater sees every comparison; the order is shuffled and one coin flips all A/B sides together, seeded with the rater id
     // (the build balances the pair order within each block).
