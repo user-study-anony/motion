@@ -1,6 +1,6 @@
 {
  "study": "ustudy-prolific-f1",
- "version": "f1-b1",
+ "version": "f1-b1-v2",
  "block": 1,
  "n_blocks": 13,
  "note": "Formal study f1, block 1 of 13: 10 comparisons. Items and clips are opaque codes.",
@@ -12,8 +12,8 @@
    "I": "clips/65ed81b690b7e13d.jpg",
    "R": "clips/c936205749570b57.mp4",
    "clips": {
-    "evap": "clips/b6817af63944bd6a.mp4",
-    "2jt6": "clips/2969a3dcbc8640a5.mp4"
+    "evap": "clips/4aa4c94b50f5e635.mp4",
+    "2jt6": "clips/7866ef628d1e4899.mp4"
    }
   },
   {
@@ -45,8 +45,8 @@
    "I": "clips/2f0c85d0de8ab149.jpg",
    "R": "clips/a1c22d934cdf1bcb.mp4",
    "clips": {
-    "peck": "clips/5652289ac594c633.mp4",
-    "qfy2": "clips/535201d04ae970a8.mp4"
+    "peck": "clips/84cd954007c73afe.mp4",
+    "qfy2": "clips/2593eb1f41ab79df.mp4"
    }
   },
   {
@@ -56,8 +56,8 @@
    "I": "clips/19747be903e9f588.jpg",
    "R": "clips/b24111e92aaff504.mp4",
    "clips": {
-    "vz5g": "clips/aab3c4f68f56a10f.mp4",
-    "awgw": "clips/95f650c7511fdb44.mp4"
+    "vz5g": "clips/6adacf67b513ac7d.mp4",
+    "awgw": "clips/67f2cccd0b7a84a9.mp4"
    }
   },
   {
@@ -67,8 +67,8 @@
    "I": "clips/2f0c85d0de8ab149.jpg",
    "R": "clips/a1c22d934cdf1bcb.mp4",
    "clips": {
-    "njff": "clips/1f53180914fecb99.mp4",
-    "dk85": "clips/6f035f80420819d4.mp4"
+    "njff": "clips/7d3a4087b5eb41ce.mp4",
+    "dk85": "clips/0ee994c90314865d.mp4"
    }
   },
   {
@@ -89,8 +89,8 @@
    "I": "clips/4f3dcc38e7a00646.jpg",
    "R": "clips/a2fcb7bf2a4e964e.mp4",
    "clips": {
-    "hyqq": "clips/28c28dddc1997658.mp4",
-    "ns8s": "clips/959a6bb5e36df3b1.mp4"
+    "hyqq": "clips/fc4a89e0b659bfc1.mp4",
+    "ns8s": "clips/1d43322f686409df.mp4"
    }
   },
   {
@@ -129,32 +129,32 @@
    "id": "c012",
    "item": "i031",
    "pair": [
-    "njff",
-    "dk85"
+    "dk85",
+    "njff"
    ]
   },
   {
    "id": "c018",
    "item": "i028",
    "pair": [
-    "vz5g",
-    "awgw"
+    "awgw",
+    "vz5g"
    ]
   },
   {
    "id": "c027",
    "item": "i055",
    "pair": [
-    "ns8s",
-    "hyqq"
+    "hyqq",
+    "ns8s"
    ]
   },
   {
    "id": "c064",
    "item": "i064",
    "pair": [
-    "hbbm",
-    "p6ur"
+    "p6ur",
+    "hbbm"
    ]
   },
   {
@@ -169,24 +169,24 @@
    "id": "c077",
    "item": "i017",
    "pair": [
-    "y46k",
-    "zzpt"
+    "zzpt",
+    "y46k"
    ]
   },
   {
    "id": "c095",
    "item": "i027",
    "pair": [
-    "peck",
-    "qfy2"
+    "qfy2",
+    "peck"
    ]
   },
   {
    "id": "c104",
    "item": "i060",
    "pair": [
-    "fc3m",
-    "um53"
+    "um53",
+    "fc3m"
    ]
   },
   {

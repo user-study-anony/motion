@@ -1,6 +1,6 @@
 {
  "study": "ustudy-prolific-f1",
- "version": "f1-b9",
+ "version": "f1-b9-v2",
  "block": 9,
  "n_blocks": 13,
  "note": "Formal study f1, block 9 of 13: 10 comparisons. Items and clips are opaque codes.",
@@ -12,8 +12,8 @@
    "I": "clips/009406c69de86250.jpg",
    "R": "clips/a9073f34aadcb88d.mp4",
    "clips": {
-    "b6qx": "clips/2e7117c6ee502013.mp4",
-    "uj7q": "clips/b2e09a8585b53c7c.mp4"
+    "b6qx": "clips/db6f78844a130d4b.mp4",
+    "uj7q": "clips/f6978065ac5d5fed.mp4"
    }
   },
   {
@@ -23,8 +23,8 @@
    "I": "clips/ec322a0006301311.jpg",
    "R": "clips/888ad615aa300a52.mp4",
    "clips": {
-    "h5x8": "clips/a9f7f226488d21a8.mp4",
-    "eqkv": "clips/c83da7491265ca1b.mp4"
+    "h5x8": "clips/93f869e4aca9e4cf.mp4",
+    "eqkv": "clips/1d394457356ff207.mp4"
    }
   },
   {
@@ -78,8 +78,8 @@
    "I": "clips/348b676e6ddfb1d0.jpg",
    "R": "clips/ff4461fd952b7a18.mp4",
    "clips": {
-    "b2gr": "clips/fb29e036a7bb64ec.mp4",
-    "87r3": "clips/738bf553834ee9e5.mp4"
+    "b2gr": "clips/e655996be2035540.mp4",
+    "87r3": "clips/af9b8d1242cd3991.mp4"
    }
   },
   {
@@ -100,8 +100,8 @@
    "I": "clips/aa356c5c33e730d4.jpg",
    "R": "clips/587fdf826ca64798.mp4",
    "clips": {
-    "u6sc": "clips/e97e220dbd70a4f6.mp4",
-    "xwdm": "clips/0463c0da72ae18bd.mp4"
+    "u6sc": "clips/669b5b768dbe6502.mp4",
+    "xwdm": "clips/8bfc9e90e002db54.mp4"
    }
   },
   {
@@ -111,8 +111,8 @@
    "I": "clips/4a569787bd91dc02.jpg",
    "R": "clips/302d6ed685650672.mp4",
    "clips": {
-    "68dy": "clips/c898a51a574d936c.mp4",
-    "x73j": "clips/9916eb71dcbdb2b5.mp4"
+    "68dy": "clips/649a205f5bfcc0f3.mp4",
+    "x73j": "clips/e96db448eb53f7c1.mp4"
    }
   }
  ],
@@ -121,24 +121,24 @@
    "id": "c021",
    "item": "i056",
    "pair": [
-    "u6sc",
-    "xwdm"
+    "xwdm",
+    "u6sc"
    ]
   },
   {
    "id": "c041",
    "item": "i006",
    "pair": [
-    "uj7q",
-    "b6qx"
+    "b6qx",
+    "uj7q"
    ]
   },
   {
    "id": "c062",
    "item": "i033",
    "pair": [
-    "92wt",
-    "3qh6"
+    "3qh6",
+    "92wt"
    ]
   },
   {
@@ -185,16 +185,16 @@
    "id": "c109",
    "item": "i054",
    "pair": [
-    "b2gr",
-    "87r3"
+    "87r3",
+    "b2gr"
    ]
   },
   {
    "id": "c130",
    "item": "i058",
    "pair": [
-    "68dy",
-    "x73j"
+    "x73j",
+    "68dy"
    ]
   }
  ]

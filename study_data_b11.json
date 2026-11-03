@@ -1,6 +1,6 @@
 {
  "study": "ustudy-prolific-f1",
- "version": "f1-b11",
+ "version": "f1-b11-v2",
  "block": 11,
  "n_blocks": 13,
  "note": "Formal study f1, block 11 of 13: 10 comparisons. Items and clips are opaque codes.",
@@ -23,8 +23,8 @@
    "I": "clips/4f3dcc38e7a00646.jpg",
    "R": "clips/a2fcb7bf2a4e964e.mp4",
    "clips": {
-    "xkvf": "clips/0577272f3ce41346.mp4",
-    "59u8": "clips/8a6739dd3a3250d0.mp4"
+    "xkvf": "clips/a1a555b47263ad26.mp4",
+    "59u8": "clips/1209aec169891caa.mp4"
    }
   },
   {
@@ -34,8 +34,8 @@
    "I": "clips/e364a586e0b1430c.jpg",
    "R": "clips/7faf379a6482463a.mp4",
    "clips": {
-    "d9yq": "clips/0b1d8d906800ae20.mp4",
-    "9xjz": "clips/fb4b6804a30832ea.mp4"
+    "d9yq": "clips/56a786a659a138b9.mp4",
+    "9xjz": "clips/28bead5e7195c576.mp4"
    }
   },
   {
@@ -56,8 +56,8 @@
    "I": "clips/2f0c85d0de8ab149.jpg",
    "R": "clips/2df96b1ea0fb6153.mp4",
    "clips": {
-    "f42c": "clips/d4990ce4057feb9b.mp4",
-    "6ka7": "clips/ebb5df48e50993fc.mp4"
+    "f42c": "clips/50b7797a6cc0393c.mp4",
+    "6ka7": "clips/376224c1aed6ec79.mp4"
    }
   },
   {
@@ -67,8 +67,8 @@
    "I": "clips/aa356c5c33e730d4.jpg",
    "R": "clips/587fdf826ca64798.mp4",
    "clips": {
-    "4t5g": "clips/660594a905a121d4.mp4",
-    "h6aj": "clips/fe518e719977ecc1.mp4"
+    "4t5g": "clips/5cbac02c21865866.mp4",
+    "h6aj": "clips/ac7dc7e9ddad3fec.mp4"
    }
   },
   {
@@ -100,8 +100,8 @@
    "I": "clips/385ce7bac727c742.jpg",
    "R": "clips/802a5ba2250bc338.mp4",
    "clips": {
-    "cur3": "clips/24df4a44be17adf7.mp4",
-    "uy3c": "clips/95fc4f24e47a5e05.mp4"
+    "cur3": "clips/9357848cd1fc120f.mp4",
+    "uy3c": "clips/f3e6a5356203e778.mp4"
    }
   },
   {
@@ -137,8 +137,8 @@
    "id": "c024",
    "item": "i045",
    "pair": [
-    "6zdz",
-    "nwz4"
+    "nwz4",
+    "6zdz"
    ]
   },
   {
@@ -153,8 +153,8 @@
    "id": "c039",
    "item": "i030",
    "pair": [
-    "9xjz",
-    "d9yq"
+    "d9yq",
+    "9xjz"
    ]
   },
   {
@@ -169,8 +169,8 @@
    "id": "c065",
    "item": "i036",
    "pair": [
-    "6ka7",
-    "f42c"
+    "f42c",
+    "6ka7"
    ]
   },
   {
@@ -193,8 +193,8 @@
    "id": "c112",
    "item": "i063",
    "pair": [
-    "cur3",
-    "uy3c"
+    "uy3c",
+    "cur3"
    ]
   }
  ]

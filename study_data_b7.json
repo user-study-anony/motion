@@ -1,6 +1,6 @@
 {
  "study": "ustudy-prolific-f1",
- "version": "f1-b7",
+ "version": "f1-b7-v2",
  "block": 7,
  "n_blocks": 13,
  "note": "Formal study f1, block 7 of 13: 10 comparisons. Items and clips are opaque codes.",
@@ -12,8 +12,8 @@
    "I": "clips/dca871bd7803eb9e.jpg",
    "R": "clips/8e5298bbed344f43.mp4",
    "clips": {
-    "64ub": "clips/c7d44ea559cb0460.mp4",
-    "qcyy": "clips/c5bc3fe0492ac582.mp4"
+    "64ub": "clips/ae6a9024444387b5.mp4",
+    "qcyy": "clips/56f65dfaff8bfb5a.mp4"
    }
   },
   {
@@ -56,8 +56,8 @@
    "I": "clips/579d4933a41202b8.jpg",
    "R": "clips/442332bb7ecbc809.mp4",
    "clips": {
-    "yx29": "clips/23ee544907847b96.mp4",
-    "tk2r": "clips/fc477a82986cec6d.mp4"
+    "yx29": "clips/39eb78f09c0889b8.mp4",
+    "tk2r": "clips/c225bde1bd478278.mp4"
    }
   },
   {
@@ -67,8 +67,8 @@
    "I": "clips/5707b261f6c1fd3b.jpg",
    "R": "clips/0a76d9ea3687c250.mp4",
    "clips": {
-    "g7ze": "clips/d85f043560fe63bb.mp4",
-    "823x": "clips/b1dd3be6d0d82368.mp4"
+    "g7ze": "clips/350b008dae9dbe41.mp4",
+    "823x": "clips/36b496fe20282bbd.mp4"
    }
   },
   {
@@ -89,8 +89,8 @@
    "I": "clips/e7dde34aab24860f.jpg",
    "R": "clips/1ea426084280135b.mp4",
    "clips": {
-    "v6u9": "clips/cc41a9716ed823f6.mp4",
-    "w5he": "clips/321f3477a8d42672.mp4"
+    "v6u9": "clips/9788222e0a987983.mp4",
+    "w5he": "clips/8ab540a6b5a222d4.mp4"
    }
   },
   {
@@ -100,8 +100,8 @@
    "I": "clips/ed535656b87bc0e0.jpg",
    "R": "clips/dd534d76f44edc2e.mp4",
    "clips": {
-    "zcyk": "clips/589c6c833cbba4c2.mp4",
-    "wmdm": "clips/1140217f6c47538c.mp4"
+    "zcyk": "clips/73c56a7c580b333e.mp4",
+    "wmdm": "clips/004c9d4e02ef32dd.mp4"
    }
   },
   {
@@ -145,16 +145,16 @@
    "id": "c067",
    "item": "i016",
    "pair": [
-    "p7un",
-    "26zf"
+    "26zf",
+    "p7un"
    ]
   },
   {
    "id": "c082",
    "item": "i061",
    "pair": [
-    "wmdm",
-    "zcyk"
+    "zcyk",
+    "wmdm"
    ]
   },
   {

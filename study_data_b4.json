@@ -1,6 +1,6 @@
 {
  "study": "ustudy-prolific-f1",
- "version": "f1-b4",
+ "version": "f1-b4-v2",
  "block": 4,
  "n_blocks": 13,
  "note": "Formal study f1, block 4 of 13: 10 comparisons. Items and clips are opaque codes.",
@@ -23,8 +23,8 @@
    "I": "clips/7512b5243a293357.jpg",
    "R": "clips/eaabb59ebda421c6.mp4",
    "clips": {
-    "7aha": "clips/71e3ce57cc6fa010.mp4",
-    "4ha6": "clips/8f868e6c9550fdbe.mp4"
+    "7aha": "clips/10b2237e748c2a3c.mp4",
+    "4ha6": "clips/08cd726e6c5de68a.mp4"
    }
   },
   {
@@ -34,8 +34,8 @@
    "I": "clips/16c305bec6d5203a.jpg",
    "R": "clips/8cf2cd34d5f017e5.mp4",
    "clips": {
-    "en98": "clips/7758e2b8fef5ac9f.mp4",
-    "hvwr": "clips/50c3ae0e5d4cc403.mp4"
+    "en98": "clips/52bcb6dd37e57834.mp4",
+    "hvwr": "clips/889144a55eb9635b.mp4"
    }
   },
   {
@@ -45,8 +45,8 @@
    "I": "clips/aa356c5c33e730d4.jpg",
    "R": "clips/587fdf826ca64798.mp4",
    "clips": {
-    "ndhq": "clips/c07f63c1489abed0.mp4",
-    "y3r8": "clips/be0eab70ddb7f417.mp4"
+    "ndhq": "clips/50c9c39826060a7a.mp4",
+    "y3r8": "clips/ba14ba11f7edab2e.mp4"
    }
   },
   {
@@ -67,8 +67,8 @@
    "I": "clips/ec322a0006301311.jpg",
    "R": "clips/888ad615aa300a52.mp4",
    "clips": {
-    "d8yc": "clips/91bd007bd8a1d9d9.mp4",
-    "nm7t": "clips/f68afc2cecfb83c1.mp4"
+    "d8yc": "clips/e1b6ac29f2f8a122.mp4",
+    "nm7t": "clips/7832f55a6efc8aa0.mp4"
    }
   },
   {
@@ -89,8 +89,8 @@
    "I": "clips/5a5694f4a06f3d2d.jpg",
    "R": "clips/a7b1770967a3c04a.mp4",
    "clips": {
-    "g434": "clips/3e27bb1ddcdac2d1.mp4",
-    "gwx6": "clips/ed11ebc9d2c3da01.mp4"
+    "g434": "clips/341e3300f96adf06.mp4",
+    "gwx6": "clips/8799d7f34286509f.mp4"
    }
   },
   {
@@ -145,8 +145,8 @@
    "id": "c038",
    "item": "i003",
    "pair": [
-    "z9ad",
-    "zqqw"
+    "zqqw",
+    "z9ad"
    ]
   },
   {
@@ -161,8 +161,8 @@
    "id": "c054",
    "item": "i014",
    "pair": [
-    "4ha6",
-    "7aha"
+    "7aha",
+    "4ha6"
    ]
   },
   {
@@ -177,24 +177,24 @@
    "id": "c106",
    "item": "i051",
    "pair": [
-    "hxgj",
-    "3eaq"
+    "3eaq",
+    "hxgj"
    ]
   },
   {
    "id": "c116",
    "item": "i028",
    "pair": [
-    "pk2z",
-    "kvfx"
+    "kvfx",
+    "pk2z"
    ]
   },
   {
    "id": "c126",
    "item": "i017",
    "pair": [
-    "en98",
-    "hvwr"
+    "hvwr",
+    "en98"
    ]
   }
  ]

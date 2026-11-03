@@ -1,6 +1,6 @@
 {
  "study": "ustudy-prolific-f1",
- "version": "f1-b5",
+ "version": "f1-b5-v2",
  "block": 5,
  "n_blocks": 13,
  "note": "Formal study f1, block 5 of 13: 10 comparisons. Items and clips are opaque codes.",
@@ -23,8 +23,8 @@
    "I": "clips/5a5694f4a06f3d2d.jpg",
    "R": "clips/a7b1770967a3c04a.mp4",
    "clips": {
-    "jtju": "clips/45e642992e9a5371.mp4",
-    "u5ba": "clips/1d6ef7441c173957.mp4"
+    "jtju": "clips/7ec51faeaa7ac16b.mp4",
+    "u5ba": "clips/5c3312c54017ec8d.mp4"
    }
   },
   {
@@ -45,8 +45,8 @@
    "I": "clips/5a5694f4a06f3d2d.jpg",
    "R": "clips/3a68a3f1735976cc.mp4",
    "clips": {
-    "eja6": "clips/9c4567586c05574a.mp4",
-    "3s5v": "clips/45f1d6e2b35d0aff.mp4"
+    "eja6": "clips/c8513a5d0c2ab65b.mp4",
+    "3s5v": "clips/841568f5d3a2b13d.mp4"
    }
   },
   {
@@ -56,8 +56,8 @@
    "I": "clips/d5b42809ab636893.jpg",
    "R": "clips/4d018f4eb040e00c.mp4",
    "clips": {
-    "xrkk": "clips/5ddf8223a3537088.mp4",
-    "zrng": "clips/7d93233b32720fe6.mp4"
+    "xrkk": "clips/79dabcaa93d5aa77.mp4",
+    "zrng": "clips/c7a37fae96bb7f8e.mp4"
    }
   },
   {
@@ -78,8 +78,8 @@
    "I": "clips/4f3dcc38e7a00646.jpg",
    "R": "clips/a2fcb7bf2a4e964e.mp4",
    "clips": {
-    "un28": "clips/ea6f267f8d3ea94e.mp4",
-    "ft8y": "clips/8f6484ae781d0761.mp4"
+    "un28": "clips/6225d837a08c2157.mp4",
+    "ft8y": "clips/751603b624aed690.mp4"
    }
   },
   {
@@ -100,8 +100,8 @@
    "I": "clips/ef3a02f8e4a5269f.jpg",
    "R": "clips/ab0f88f3a58a0a77.mp4",
    "clips": {
-    "duk7": "clips/39b9df308c786f15.mp4",
-    "85t5": "clips/7a085d839b943600.mp4"
+    "duk7": "clips/1614324d39f5b333.mp4",
+    "85t5": "clips/de662cb7d58328c0.mp4"
    }
   },
   {
@@ -121,16 +121,16 @@
    "id": "c003",
    "item": "i066",
    "pair": [
-    "cn35",
-    "gjrj"
+    "gjrj",
+    "cn35"
    ]
   },
   {
    "id": "c014",
    "item": "i052",
    "pair": [
-    "duk7",
-    "85t5"
+    "85t5",
+    "duk7"
    ]
   },
   {
@@ -161,8 +161,8 @@
    "id": "c074",
    "item": "i022",
    "pair": [
-    "xrkk",
-    "zrng"
+    "zrng",
+    "xrkk"
    ]
   },
   {
@@ -185,16 +185,16 @@
    "id": "c105",
    "item": "i011",
    "pair": [
-    "pmbt",
-    "zjzj"
+    "zjzj",
+    "pmbt"
    ]
   },
   {
    "id": "c111",
    "item": "i010",
    "pair": [
-    "jtju",
-    "u5ba"
+    "u5ba",
+    "jtju"
    ]
   }
  ]

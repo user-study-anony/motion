@@ -45,7 +45,8 @@ const QTEXT = {
     q2: 'Apart from the change the instruction asks for, which video better keeps the rest of the reference motion?',
     q2_copy: 'Which video better follows the reference motion (steps, rhythm, posture, arm swing)?',
     q3: 'Apart from turns that the reference performer makes, which video keeps the person facing the same way as in the photo (front, side or back)?',
-    q4: 'All things considered (the instruction, the motion, the person and scene of the photo, image quality), which result is better?'
+    q4: 'Considering both the change the instruction asks for and the rest of the reference motion, which video is the better result?',
+    q5: 'Overall, which video would you prefer as the result for this photo, reference and instruction?'
 };
 const OPTIONS = [['A', 'A better'], ['S', 'About the same'], ['B', 'B better']];
 

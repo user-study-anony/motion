@@ -9,7 +9,7 @@
 
     var SCHEMA = 'ustudy-smoke-payload/v1';
     var STATE_SCHEMA = 'ustudy-smoke-state/v1';
-    var QUESTIONS = ['q1', 'q2', 'q3', 'q4'];
+    var QUESTIONS = ['q1', 'q2', 'q3', 'q4', 'q5'];
     var ANSWERS = ['A', 'S', 'B'];          // A = left video better, S = about the same, B = right video better
 
     // Seeded PRNG: cyrb128 string hash -> sfc32 generator (deterministic per rater id).
@@ -61,9 +61,10 @@
         data.items.forEach(function (it) { m[it.id] = it; });
         return m;
     }
-    function questionsFor(item) { return item.kind === 'copy' ? ['q2', 'q3', 'q4'] : ['q1', 'q2', 'q3', 'q4']; }   // owner 11/01: one question per concept; copy screens have no instruction question (q2 = reference motion on every screen)
+    function questionsFor(item) { return item.kind === 'copy' ? ['q2', 'q3', 'q5'] : ['q1', 'q2', 'q3', 'q4', 'q5']; }   // one question per concept: copy screens have no instruction question (11/01); q4 = both, edit screens only, and q5 = overall on every screen (11/03)
 
-    // Every rater sees every comparison; order and sides are shuffled with the rater id as the seed.
+    // Every rater sees every comparison; the order is shuffled and one coin flips all A/B sides together, seeded with the rater id
+    // (the build balances the pair order within each block).
     function buildPlan(data, rid) {
         var r = rng(data.study + '|' + data.version + '|' + rid);
         var order = data.comparisons.slice();
@@ -71,8 +72,8 @@
             var j = Math.floor(r() * (i + 1));
             var t = order[i]; order[i] = order[j]; order[j] = t;
         }
+        var swap = r() < 0.5;
         return order.map(function (c, pos) {
-            var swap = r() < 0.5;
             return { cmp: c.id, item: c.item, left: swap ? c.pair[1] : c.pair[0], right: swap ? c.pair[0] : c.pair[1], pos: pos };
         });
     }
@@ -118,7 +119,7 @@
             var done = qs.every(function (q) { return ANSWERS.indexOf(a[q]) >= 0; });
             if (done) { nComplete++; }
             return { cmp: p.cmp, pos: p.pos, item: p.item, kind: items[p.item].kind, left: p.left, right: p.right,
-                     q1: a.q1 || null, q2: qs.indexOf('q2') >= 0 ? (a.q2 || null) : null, q3: a.q3 || null, q4: a.q4 || null, complete: done,
+                     q1: a.q1 || null, q2: qs.indexOf('q2') >= 0 ? (a.q2 || null) : null, q3: a.q3 || null, q4: qs.indexOf('q4') >= 0 ? (a.q4 || null) : null, q5: a.q5 || null, complete: done,
                      watch_ms: Math.round(state.watchMs[p.cmp] || 0), answered_utc: state.answeredUtc[p.cmp] || null };
         });
         return { schema: SCHEMA, study: data.study, version: data.version, rater_id: state.rid, rid_source: state.ridSource,
