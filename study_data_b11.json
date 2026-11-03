@@ -1,0 +1,201 @@
+{
+ "study": "ustudy-prolific-f1",
+ "version": "f1-b11",
+ "block": 11,
+ "n_blocks": 13,
+ "note": "Formal study f1, block 11 of 13: 10 comparisons. Items and clips are opaque codes.",
+ "items": [
+  {
+   "id": "i001",
+   "kind": "edit",
+   "T": "keep your hands resting on your hips the entire time",
+   "I": "clips/dca871bd7803eb9e.jpg",
+   "R": "clips/8e5298bbed344f43.mp4",
+   "clips": {
+    "nxu3": "clips/9607c6e0286a2c4a.mp4",
+    "zv8j": "clips/39793954c1662594.mp4"
+   }
+  },
+  {
+   "id": "i009",
+   "kind": "edit",
+   "T": "keep the arms stretched out in front the whole time",
+   "I": "clips/4f3dcc38e7a00646.jpg",
+   "R": "clips/a2fcb7bf2a4e964e.mp4",
+   "clips": {
+    "xkvf": "clips/0577272f3ce41346.mp4",
+    "59u8": "clips/8a6739dd3a3250d0.mp4"
+   }
+  },
+  {
+   "id": "i030",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/e364a586e0b1430c.jpg",
+   "R": "clips/7faf379a6482463a.mp4",
+   "clips": {
+    "d9yq": "clips/0b1d8d906800ae20.mp4",
+    "9xjz": "clips/fb4b6804a30832ea.mp4"
+   }
+  },
+  {
+   "id": "i031",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/a1c22d934cdf1bcb.mp4",
+   "clips": {
+    "pygn": "clips/1f53180914fecb99.mp4",
+    "9wr9": "clips/ab2a29ee72d824f1.mp4"
+   }
+  },
+  {
+   "id": "i036",
+   "kind": "edit",
+   "T": "a person walking backwards",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/2df96b1ea0fb6153.mp4",
+   "clips": {
+    "f42c": "clips/d4990ce4057feb9b.mp4",
+    "6ka7": "clips/ebb5df48e50993fc.mp4"
+   }
+  },
+  {
+   "id": "i043",
+   "kind": "edit",
+   "T": "Keep hands at chin level all the time.",
+   "I": "clips/aa356c5c33e730d4.jpg",
+   "R": "clips/587fdf826ca64798.mp4",
+   "clips": {
+    "4t5g": "clips/660594a905a121d4.mp4",
+    "h6aj": "clips/fe518e719977ecc1.mp4"
+   }
+  },
+  {
+   "id": "i045",
+   "kind": "edit",
+   "T": "keep your hands resting on your hips the entire time",
+   "I": "clips/579d4933a41202b8.jpg",
+   "R": "clips/442332bb7ecbc809.mp4",
+   "clips": {
+    "nwz4": "clips/bbc71dcc144086d9.mp4",
+    "6zdz": "clips/27e1c0bb9942a1d7.mp4"
+   }
+  },
+  {
+   "id": "i062",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/340163963a452d1c.jpg",
+   "R": "clips/6d275712543e8385.mp4",
+   "clips": {
+    "zh2k": "clips/e8b77431fcb0c1ac.mp4",
+    "z6mx": "clips/4404cec6d1c3e48f.mp4"
+   }
+  },
+  {
+   "id": "i063",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/385ce7bac727c742.jpg",
+   "R": "clips/802a5ba2250bc338.mp4",
+   "clips": {
+    "cur3": "clips/24df4a44be17adf7.mp4",
+    "uy3c": "clips/95fc4f24e47a5e05.mp4"
+   }
+  },
+  {
+   "id": "i065",
+   "kind": "edit",
+   "T": "a person walking backwards",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/888ad615aa300a52.mp4",
+   "clips": {
+    "x3rz": "clips/fc9c71b000098972.mp4",
+    "h4tu": "clips/0dad55324f723aae.mp4"
+   }
+  }
+ ],
+ "comparisons": [
+  {
+   "id": "c002",
+   "item": "i001",
+   "pair": [
+    "zv8j",
+    "nxu3"
+   ]
+  },
+  {
+   "id": "c017",
+   "item": "i043",
+   "pair": [
+    "h6aj",
+    "4t5g"
+   ]
+  },
+  {
+   "id": "c024",
+   "item": "i045",
+   "pair": [
+    "6zdz",
+    "nwz4"
+   ]
+  },
+  {
+   "id": "c032",
+   "item": "i065",
+   "pair": [
+    "h4tu",
+    "x3rz"
+   ]
+  },
+  {
+   "id": "c039",
+   "item": "i030",
+   "pair": [
+    "9xjz",
+    "d9yq"
+   ]
+  },
+  {
+   "id": "c060",
+   "item": "i031",
+   "pair": [
+    "pygn",
+    "9wr9"
+   ]
+  },
+  {
+   "id": "c065",
+   "item": "i036",
+   "pair": [
+    "6ka7",
+    "f42c"
+   ]
+  },
+  {
+   "id": "c073",
+   "item": "i009",
+   "pair": [
+    "59u8",
+    "xkvf"
+   ]
+  },
+  {
+   "id": "c090",
+   "item": "i062",
+   "pair": [
+    "zh2k",
+    "z6mx"
+   ]
+  },
+  {
+   "id": "c112",
+   "item": "i063",
+   "pair": [
+    "cur3",
+    "uy3c"
+   ]
+  }
+ ]
+}

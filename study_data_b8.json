@@ -1,0 +1,201 @@
+{
+ "study": "ustudy-prolific-f1",
+ "version": "f1-b8",
+ "block": 8,
+ "n_blocks": 13,
+ "note": "Formal study f1, block 8 of 13: 10 comparisons. Items and clips are opaque codes.",
+ "items": [
+  {
+   "id": "i013",
+   "kind": "edit",
+   "T": "the person on the left performs the motion; the others clap",
+   "I": "clips/92e234e8da37d2c3.jpg",
+   "R": "clips/5f80b1f72f7565eb.mp4",
+   "clips": {
+    "hp8b": "clips/ed4613121ce915b3.mp4",
+    "dygb": "clips/20cb0245db85d582.mp4"
+   }
+  },
+  {
+   "id": "i018",
+   "kind": "copy",
+   "T": "a person walking forwards",
+   "I": "clips/2d00a3797745cb6a.jpg",
+   "R": "clips/17164df7c235dc97.mp4",
+   "clips": {
+    "2pbx": "clips/e6c723ed844b5790.mp4",
+    "xzr5": "clips/6e006aecdd8a97ff.mp4"
+   }
+  },
+  {
+   "id": "i027",
+   "kind": "edit",
+   "T": "Keep hands at chin level all the time.",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/a1c22d934cdf1bcb.mp4",
+   "clips": {
+    "8jgj": "clips/5652289ac594c633.mp4",
+    "w7eu": "clips/714bef1db14c0023.mp4"
+   }
+  },
+  {
+   "id": "i037",
+   "kind": "edit",
+   "T": "Keep hands at chin level all the time.",
+   "I": "clips/65ed81b690b7e13d.jpg",
+   "R": "clips/c936205749570b57.mp4",
+   "clips": {
+    "jkjj": "clips/95d92c6479b8750f.mp4",
+    "pem9": "clips/94dbb5b051a96171.mp4"
+   }
+  },
+  {
+   "id": "i039",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping both hands on the hips",
+   "I": "clips/16c305bec6d5203a.jpg",
+   "R": "clips/8cf2cd34d5f017e5.mp4",
+   "clips": {
+    "39qy": "clips/5e0bd11873aa0478.mp4",
+    "umbu": "clips/2daa49f09622f795.mp4"
+   }
+  },
+  {
+   "id": "i041",
+   "kind": "edit",
+   "T": "a person walking backwards",
+   "I": "clips/d47e68f614f1dd57.jpg",
+   "R": "clips/a7b1770967a3c04a.mp4",
+   "clips": {
+    "25sw": "clips/8d988edf7defeefa.mp4",
+    "qz8a": "clips/29fa270fd6593777.mp4"
+   }
+  },
+  {
+   "id": "i050",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/136129554b827c4f.jpg",
+   "R": "clips/19f0040cecd17f9a.mp4",
+   "clips": {
+    "3rhb": "clips/0a21e7921f5197b0.mp4",
+    "c6nt": "clips/bb9114fba168f36f.mp4"
+   }
+  },
+  {
+   "id": "i053",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/3f0ce24725a09986.jpg",
+   "R": "clips/c5e8a64f8c7cf3b4.mp4",
+   "clips": {
+    "n7a9": "clips/182592502de581a0.mp4",
+    "c43h": "clips/a40a91232f30e89f.mp4"
+   }
+  },
+  {
+   "id": "i059",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping hands at chin level all the time",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/888ad615aa300a52.mp4",
+   "clips": {
+    "abbf": "clips/c5cc603e8457168f.mp4",
+    "mbre": "clips/dffc3bfc28e32e83.mp4"
+   }
+  },
+  {
+   "id": "i064",
+   "kind": "edit",
+   "T": "Keep hands at chin level all the time.",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/32ce5c22741261d4.mp4",
+   "clips": {
+    "2me2": "clips/9555764964ef2a51.mp4",
+    "dn2v": "clips/d7b21a992c1b4c14.mp4"
+   }
+  }
+ ],
+ "comparisons": [
+  {
+   "id": "c019",
+   "item": "i041",
+   "pair": [
+    "25sw",
+    "qz8a"
+   ]
+  },
+  {
+   "id": "c037",
+   "item": "i013",
+   "pair": [
+    "hp8b",
+    "dygb"
+   ]
+  },
+  {
+   "id": "c043",
+   "item": "i027",
+   "pair": [
+    "w7eu",
+    "8jgj"
+   ]
+  },
+  {
+   "id": "c044",
+   "item": "i037",
+   "pair": [
+    "pem9",
+    "jkjj"
+   ]
+  },
+  {
+   "id": "c047",
+   "item": "i064",
+   "pair": [
+    "2me2",
+    "dn2v"
+   ]
+  },
+  {
+   "id": "c049",
+   "item": "i059",
+   "pair": [
+    "abbf",
+    "mbre"
+   ]
+  },
+  {
+   "id": "c071",
+   "item": "i053",
+   "pair": [
+    "c43h",
+    "n7a9"
+   ]
+  },
+  {
+   "id": "c110",
+   "item": "i018",
+   "pair": [
+    "xzr5",
+    "2pbx"
+   ]
+  },
+  {
+   "id": "c114",
+   "item": "i050",
+   "pair": [
+    "c6nt",
+    "3rhb"
+   ]
+  },
+  {
+   "id": "c118",
+   "item": "i039",
+   "pair": [
+    "39qy",
+    "umbu"
+   ]
+  }
+ ]
+}

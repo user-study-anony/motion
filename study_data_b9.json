@@ -1,0 +1,201 @@
+{
+ "study": "ustudy-prolific-f1",
+ "version": "f1-b9",
+ "block": 9,
+ "n_blocks": 13,
+ "note": "Formal study f1, block 9 of 13: 10 comparisons. Items and clips are opaque codes.",
+ "items": [
+  {
+   "id": "i006",
+   "kind": "edit",
+   "T": "keep your hands resting on your hips the entire time",
+   "I": "clips/009406c69de86250.jpg",
+   "R": "clips/a9073f34aadcb88d.mp4",
+   "clips": {
+    "b6qx": "clips/2e7117c6ee502013.mp4",
+    "uj7q": "clips/b2e09a8585b53c7c.mp4"
+   }
+  },
+  {
+   "id": "i019",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping the head down",
+   "I": "clips/ec322a0006301311.jpg",
+   "R": "clips/888ad615aa300a52.mp4",
+   "clips": {
+    "h5x8": "clips/a9f7f226488d21a8.mp4",
+    "eqkv": "clips/c83da7491265ca1b.mp4"
+   }
+  },
+  {
+   "id": "i021",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/579d4933a41202b8.jpg",
+   "R": "clips/442332bb7ecbc809.mp4",
+   "clips": {
+    "xxkb": "clips/23ee544907847b96.mp4",
+    "mhmk": "clips/00a7460f449f4dee.mp4"
+   }
+  },
+  {
+   "id": "i024",
+   "kind": "edit",
+   "T": "keep the arms stretched out in front the whole time",
+   "I": "clips/e364a586e0b1430c.jpg",
+   "R": "clips/7faf379a6482463a.mp4",
+   "clips": {
+    "gxyr": "clips/ce30c765dec3b675.mp4",
+    "3z4q": "clips/dc2b2c2fa8b8af28.mp4"
+   }
+  },
+  {
+   "id": "i033",
+   "kind": "edit",
+   "T": "Keep hands at chin level all the time.",
+   "I": "clips/5707b261f6c1fd3b.jpg",
+   "R": "clips/0a76d9ea3687c250.mp4",
+   "clips": {
+    "3qh6": "clips/d85f043560fe63bb.mp4",
+    "92wt": "clips/2a842eb4b448f022.mp4"
+   }
+  },
+  {
+   "id": "i044",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/32ce5c22741261d4.mp4",
+   "clips": {
+    "barw": "clips/9ff15c94b888d907.mp4",
+    "hugb": "clips/0da431526fa4c889.mp4"
+   }
+  },
+  {
+   "id": "i054",
+   "kind": "edit",
+   "T": "keep your hands resting on your hips the entire time",
+   "I": "clips/348b676e6ddfb1d0.jpg",
+   "R": "clips/ff4461fd952b7a18.mp4",
+   "clips": {
+    "b2gr": "clips/fb29e036a7bb64ec.mp4",
+    "87r3": "clips/738bf553834ee9e5.mp4"
+   }
+  },
+  {
+   "id": "i055",
+   "kind": "edit",
+   "T": "keep your hands resting on your hips the entire time",
+   "I": "clips/4f3dcc38e7a00646.jpg",
+   "R": "clips/a2fcb7bf2a4e964e.mp4",
+   "clips": {
+    "swr8": "clips/28c28dddc1997658.mp4",
+    "fh5e": "clips/109d31b494c3a535.mp4"
+   }
+  },
+  {
+   "id": "i056",
+   "kind": "edit",
+   "T": "keep your hands resting on your hips the entire time",
+   "I": "clips/aa356c5c33e730d4.jpg",
+   "R": "clips/587fdf826ca64798.mp4",
+   "clips": {
+    "u6sc": "clips/e97e220dbd70a4f6.mp4",
+    "xwdm": "clips/0463c0da72ae18bd.mp4"
+   }
+  },
+  {
+   "id": "i058",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/4a569787bd91dc02.jpg",
+   "R": "clips/302d6ed685650672.mp4",
+   "clips": {
+    "68dy": "clips/c898a51a574d936c.mp4",
+    "x73j": "clips/9916eb71dcbdb2b5.mp4"
+   }
+  }
+ ],
+ "comparisons": [
+  {
+   "id": "c021",
+   "item": "i056",
+   "pair": [
+    "u6sc",
+    "xwdm"
+   ]
+  },
+  {
+   "id": "c041",
+   "item": "i006",
+   "pair": [
+    "uj7q",
+    "b6qx"
+   ]
+  },
+  {
+   "id": "c062",
+   "item": "i033",
+   "pair": [
+    "92wt",
+    "3qh6"
+   ]
+  },
+  {
+   "id": "c068",
+   "item": "i024",
+   "pair": [
+    "3z4q",
+    "gxyr"
+   ]
+  },
+  {
+   "id": "c078",
+   "item": "i021",
+   "pair": [
+    "xxkb",
+    "mhmk"
+   ]
+  },
+  {
+   "id": "c091",
+   "item": "i055",
+   "pair": [
+    "swr8",
+    "fh5e"
+   ]
+  },
+  {
+   "id": "c097",
+   "item": "i019",
+   "pair": [
+    "eqkv",
+    "h5x8"
+   ]
+  },
+  {
+   "id": "c100",
+   "item": "i044",
+   "pair": [
+    "barw",
+    "hugb"
+   ]
+  },
+  {
+   "id": "c109",
+   "item": "i054",
+   "pair": [
+    "b2gr",
+    "87r3"
+   ]
+  },
+  {
+   "id": "c130",
+   "item": "i058",
+   "pair": [
+    "68dy",
+    "x73j"
+   ]
+  }
+ ]
+}

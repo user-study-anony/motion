@@ -1,0 +1,201 @@
+{
+ "study": "ustudy-prolific-f1",
+ "version": "f1-b10",
+ "block": 10,
+ "n_blocks": 13,
+ "note": "Formal study f1, block 10 of 13: 10 comparisons. Items and clips are opaque codes.",
+ "items": [
+  {
+   "id": "i018",
+   "kind": "copy",
+   "T": "a person walking forwards",
+   "I": "clips/2d00a3797745cb6a.jpg",
+   "R": "clips/17164df7c235dc97.mp4",
+   "clips": {
+    "cn3q": "clips/ac25f5eeb5742f10.mp4",
+    "c254": "clips/b8dcd5df66828fe0.mp4"
+   }
+  },
+  {
+   "id": "i030",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/e364a586e0b1430c.jpg",
+   "R": "clips/7faf379a6482463a.mp4",
+   "clips": {
+    "8nkz": "clips/0b1d8d906800ae20.mp4",
+    "hdc6": "clips/4dc5030b8a860ba5.mp4"
+   }
+  },
+  {
+   "id": "i035",
+   "kind": "edit",
+   "T": "a person walking backwards",
+   "I": "clips/5a5694f4a06f3d2d.jpg",
+   "R": "clips/a7b1770967a3c04a.mp4",
+   "clips": {
+    "asqj": "clips/1a75ddb52cd891ee.mp4",
+    "ddwj": "clips/fcdeee181e7d7815.mp4"
+   }
+  },
+  {
+   "id": "i039",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping both hands on the hips",
+   "I": "clips/16c305bec6d5203a.jpg",
+   "R": "clips/8cf2cd34d5f017e5.mp4",
+   "clips": {
+    "mjks": "clips/5e0bd11873aa0478.mp4",
+    "7hnb": "clips/d76d22e79443ef92.mp4"
+   }
+  },
+  {
+   "id": "i041",
+   "kind": "edit",
+   "T": "a person walking backwards",
+   "I": "clips/d47e68f614f1dd57.jpg",
+   "R": "clips/a7b1770967a3c04a.mp4",
+   "clips": {
+    "j858": "clips/8d988edf7defeefa.mp4",
+    "pmqk": "clips/b3d17c5fece68f64.mp4"
+   }
+  },
+  {
+   "id": "i044",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/32ce5c22741261d4.mp4",
+   "clips": {
+    "27nz": "clips/9ff15c94b888d907.mp4",
+    "s8gm": "clips/bb77f301797a95cd.mp4"
+   }
+  },
+  {
+   "id": "i046",
+   "kind": "edit",
+   "T": "keep arms always down",
+   "I": "clips/aa356c5c33e730d4.jpg",
+   "R": "clips/587fdf826ca64798.mp4",
+   "clips": {
+    "5c7q": "clips/41a021b0c4e84901.mp4",
+    "3w6d": "clips/8e39021f2a84fcf9.mp4"
+   }
+  },
+  {
+   "id": "i053",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/3f0ce24725a09986.jpg",
+   "R": "clips/c5e8a64f8c7cf3b4.mp4",
+   "clips": {
+    "u3qx": "clips/182592502de581a0.mp4",
+    "afux": "clips/0f977799b15ddf04.mp4"
+   }
+  },
+  {
+   "id": "i059",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping hands at chin level all the time",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/888ad615aa300a52.mp4",
+   "clips": {
+    "e7uy": "clips/c5cc603e8457168f.mp4",
+    "czgf": "clips/8133e1108042ac39.mp4"
+   }
+  },
+  {
+   "id": "i067",
+   "kind": "edit",
+   "T": "keep the arms stretched out in front the whole time",
+   "I": "clips/034f802f9bffeaf3.jpg",
+   "R": "clips/b14f78c71c2a6da7.mp4",
+   "clips": {
+    "qntc": "clips/7c072e5cfc989fd0.mp4",
+    "3v3n": "clips/7b2db6b15c2a8832.mp4"
+   }
+  }
+ ],
+ "comparisons": [
+  {
+   "id": "c029",
+   "item": "i046",
+   "pair": [
+    "5c7q",
+    "3w6d"
+   ]
+  },
+  {
+   "id": "c035",
+   "item": "i030",
+   "pair": [
+    "hdc6",
+    "8nkz"
+   ]
+  },
+  {
+   "id": "c036",
+   "item": "i044",
+   "pair": [
+    "s8gm",
+    "27nz"
+   ]
+  },
+  {
+   "id": "c042",
+   "item": "i059",
+   "pair": [
+    "czgf",
+    "e7uy"
+   ]
+  },
+  {
+   "id": "c066",
+   "item": "i035",
+   "pair": [
+    "asqj",
+    "ddwj"
+   ]
+  },
+  {
+   "id": "c075",
+   "item": "i039",
+   "pair": [
+    "mjks",
+    "7hnb"
+   ]
+  },
+  {
+   "id": "c098",
+   "item": "i018",
+   "pair": [
+    "c254",
+    "cn3q"
+   ]
+  },
+  {
+   "id": "c122",
+   "item": "i041",
+   "pair": [
+    "j858",
+    "pmqk"
+   ]
+  },
+  {
+   "id": "c127",
+   "item": "i053",
+   "pair": [
+    "u3qx",
+    "afux"
+   ]
+  },
+  {
+   "id": "c128",
+   "item": "i067",
+   "pair": [
+    "qntc",
+    "3v3n"
+   ]
+  }
+ ]
+}

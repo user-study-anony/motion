@@ -6,6 +6,14 @@ const CONFIG = Object.assign({ submit: 'download', endpoint: '' }, window.STUDY_
 const Core = window.StudyCore;
 const STORE = 'ustudy-smoke-v1:';
 const AUTO_SAVE_INTERVAL = 30000;
+// Block design (formal study f1; the root study_data.json is the earlier pilot and is no longer loaded). The page loads study_data_b<k>.json:
+// ?blk=<k> picks block k explicitly (top-ups, friends; a malformed or unknown block shows a link error and no study). Without ?blk= the block
+// is assigned automatically: k = (FNV-1a 32-bit hash of the rater id) mod K + 1, K = n_blocks in study_blocks.json, remembered per rater in
+// localStorage so that a reload keeps the same block. The payload records block and block_source ('url' | 'auto').
+const BLK_PARAM = (function () { try { return new URLSearchParams(window.location.search).get('blk'); } catch (e) { return null; } })();
+let BLOCK = null, BLOCK_SOURCE = null, DATA_FILE = null;
+function fnv1a(str) { let h = 0x811c9dc5; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return h >>> 0; }
+function stateKey(rid) { return 'b' + BLOCK + ':state:' + rid; }   // progress kept per block
 
 let studyData = null;
 let state = null;
@@ -82,11 +90,40 @@ function resolveRid() {
     return { rid: rid, source: 'generated', note: param ? '(the rid in the link was not valid; a random id is used)' : '' };
 }
 
-async function loadStudyData() {
+function showLinkError(why) {
+    [prevBtn, nextBtn, replayBtn, document.getElementById('next-btn-hint')].forEach(b => { if (b) b.style.display = 'none'; });
+    comparisonContainer.innerHTML = `<div class="alert alert-danger" id="link-error"><strong>This study link is not valid.</strong> Please open the exact link
+            you were given (it ends with <code>?blk=</code> and a number). If you came from Prolific, please return to Prolific and send the researcher a message.
+            <br><small>${escapeHTML(why)}</small></div>`;
+}
+
+async function resolveBlock(rid) {
+    if (BLK_PARAM !== null && BLK_PARAM !== '') {
+        if (!/^[1-9][0-9]?$/.test(BLK_PARAM)) { showLinkError('The block number in the link is not valid.'); return false; }
+        BLOCK = parseInt(BLK_PARAM, 10); BLOCK_SOURCE = 'url';
+    } else {
+        const r = await fetch('study_blocks.json', { cache: 'no-cache' });
+        if (!r.ok) { throw new Error('HTTP ' + r.status + ' (study_blocks.json)'); }
+        const K = (await r.json()).n_blocks;
+        if (!Number.isInteger(K) || K < 1) { throw new Error('no block count in study_blocks.json'); }
+        const saved = parseInt(safeGet('blk:' + rid) || '', 10);
+        BLOCK = (saved >= 1 && saved <= K) ? saved : (fnv1a(rid) % K) + 1;
+        BLOCK_SOURCE = 'auto';
+        safeSet('blk:' + rid, String(BLOCK));
+    }
+    DATA_FILE = 'study_data_b' + BLOCK + '.json';
+    return true;
+}
+
+async function loadStudyData(rid) {
     try {
-        const response = await fetch('study_data.json', { cache: 'no-cache' });
+        if (!(await resolveBlock(rid))) { return null; }
+        const response = await fetch(DATA_FILE, { cache: 'no-cache' });
+        if (response.status === 404) { showLinkError('Block ' + BLOCK + ' does not exist.'); return null; }
         if (!response.ok) { throw new Error('HTTP ' + response.status); }
-        return await response.json();
+        const d = await response.json();
+        if (d.block !== BLOCK) { showLinkError('Block ' + BLOCK + ': the study data do not match the link.'); return null; }
+        return d;
     } catch (error) {
         comparisonContainer.innerHTML = `<div class="alert alert-danger"><strong>Error:</strong> Failed to load the study data. Please refresh the page.
             <br><small>${escapeHTML(error.message)}</small></div>`;
@@ -96,7 +133,7 @@ async function loadStudyData() {
 
 function saveProgress(isAutoSave = false) {
     if (!state) { return; }
-    const ok = safeSet('state:' + state.rid, JSON.stringify(state));
+    const ok = safeSet(stateKey(state.rid), JSON.stringify(state));
     if (!isAutoSave && ok) { showSaveStatus('Progress saved', 'saved'); }
     scheduleAutoSave();
 }
@@ -107,7 +144,7 @@ function scheduleAutoSave() {
 }
 
 function loadProgress(rid) {
-    const saved = safeGet('state:' + rid);
+    const saved = safeGet(stateKey(rid));
     if (!saved) { return null; }
     try {
         const s = JSON.parse(saved);
@@ -493,6 +530,7 @@ function currentPayload(mode) {
     p.consent_utc = state.consentUtc || null;
     p.min_watch_ms = MIN_WATCH_MS;
     p.media = state.media || {};   // per comparison: R / A (left) / B (right) -> 'played' | 'error'
+    p.block = BLOCK; p.block_source = BLOCK_SOURCE; p.data_file = DATA_FILE;   // formal block design ('url' = ?blk=<k>, 'auto' = hash of the rater id)
     return p;
 }
 
@@ -542,7 +580,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const r = resolveRid();
     document.getElementById('rater-id').textContent = r.rid;
     document.getElementById('rater-hint').textContent = '';
-    studyData = await loadStudyData();
+    studyData = await loadStudyData(r.rid);
     if (!studyData) return;
     items = Core.itemIndex(studyData);
     state = loadProgress(r.rid) || Core.newState(studyData, r.rid, r.source, nowIso());

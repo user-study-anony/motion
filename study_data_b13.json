@@ -1,0 +1,220 @@
+{
+ "study": "ustudy-prolific-f1",
+ "version": "f1-b13",
+ "block": 13,
+ "n_blocks": 13,
+ "note": "Formal study f1, block 13 of 13: 11 comparisons. Items and clips are opaque codes.",
+ "items": [
+  {
+   "id": "i005",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/496cd90e6f30cc9f.jpg",
+   "R": "clips/c7263f17b81007f3.mp4",
+   "clips": {
+    "7gdn": "clips/80897e94fb64d1aa.mp4",
+    "trte": "clips/071e2272e6ccf4b3.mp4"
+   }
+  },
+  {
+   "id": "i012",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/4c8b8d3e472af8f6.jpg",
+   "R": "clips/0761e74714a435e7.mp4",
+   "clips": {
+    "zcyn": "clips/715e4612bbd8c574.mp4",
+    "g74c": "clips/482f621a8cd4e406.mp4"
+   }
+  },
+  {
+   "id": "i013",
+   "kind": "edit",
+   "T": "the person on the left performs the motion; the others clap",
+   "I": "clips/92e234e8da37d2c3.jpg",
+   "R": "clips/5f80b1f72f7565eb.mp4",
+   "clips": {
+    "sfkw": "clips/ed4613121ce915b3.mp4",
+    "nw7h": "clips/da3d4402631747e5.mp4"
+   }
+  },
+  {
+   "id": "i025",
+   "kind": "edit",
+   "T": "Keep hands at chin level all the time.",
+   "I": "clips/f94204f14be21570.jpg",
+   "R": "clips/8117c4ceb7905c14.mp4",
+   "clips": {
+    "3asq": "clips/f40a264ae51e6dd2.mp4",
+    "vw2m": "clips/bba715692bbd801d.mp4"
+   }
+  },
+  {
+   "id": "i032",
+   "kind": "edit",
+   "T": "keep arms always down",
+   "I": "clips/e364a586e0b1430c.jpg",
+   "R": "clips/7faf379a6482463a.mp4",
+   "clips": {
+    "mkt6": "clips/8cb8754bebdf0645.mp4",
+    "7bty": "clips/097bba9f89258bd4.mp4"
+   }
+  },
+  {
+   "id": "i035",
+   "kind": "edit",
+   "T": "a person walking backwards",
+   "I": "clips/5a5694f4a06f3d2d.jpg",
+   "R": "clips/a7b1770967a3c04a.mp4",
+   "clips": {
+    "ust8": "clips/1a75ddb52cd891ee.mp4",
+    "yhus": "clips/bfbca74db9d5ee43.mp4"
+   }
+  },
+  {
+   "id": "i038",
+   "kind": "edit",
+   "T": "Keep hands at chin level all the time.",
+   "I": "clips/e7dde34aab24860f.jpg",
+   "R": "clips/1ea426084280135b.mp4",
+   "clips": {
+    "ju3m": "clips/cc41a9716ed823f6.mp4",
+    "xr7w": "clips/811585fa755606e1.mp4"
+   }
+  },
+  {
+   "id": "i047",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/4980c25b1c6affcf.jpg",
+   "R": "clips/37b0152f1e4f213f.mp4",
+   "clips": {
+    "y2kj": "clips/49fafcf5a389d72c.mp4",
+    "hvuq": "clips/45e7767429d242e6.mp4"
+   }
+  },
+  {
+   "id": "i057",
+   "kind": "edit",
+   "T": "the person on the right performs the motion; the others keep standing still",
+   "I": "clips/92e234e8da37d2c3.jpg",
+   "R": "clips/5f80b1f72f7565eb.mp4",
+   "clips": {
+    "9f7z": "clips/b5933fe2e1daff49.mp4",
+    "hwhg": "clips/8d58bcbb0eeb8092.mp4"
+   }
+  },
+  {
+   "id": "i058",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/4a569787bd91dc02.jpg",
+   "R": "clips/302d6ed685650672.mp4",
+   "clips": {
+    "ud6n": "clips/c898a51a574d936c.mp4",
+    "ztpy": "clips/ace3185b5fb7508b.mp4"
+   }
+  },
+  {
+   "id": "i060",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping the head down",
+   "I": "clips/16c305bec6d5203a.jpg",
+   "R": "clips/8cf2cd34d5f017e5.mp4",
+   "clips": {
+    "pfqn": "clips/883cc8d95e3e7df3.mp4",
+    "kscn": "clips/6ba0d3578ee47f8f.mp4"
+   }
+  }
+ ],
+ "comparisons": [
+  {
+   "id": "c008",
+   "item": "i012",
+   "pair": [
+    "g74c",
+    "zcyn"
+   ]
+  },
+  {
+   "id": "c011",
+   "item": "i047",
+   "pair": [
+    "hvuq",
+    "y2kj"
+   ]
+  },
+  {
+   "id": "c040",
+   "item": "i032",
+   "pair": [
+    "mkt6",
+    "7bty"
+   ]
+  },
+  {
+   "id": "c051",
+   "item": "i035",
+   "pair": [
+    "ust8",
+    "yhus"
+   ]
+  },
+  {
+   "id": "c053",
+   "item": "i038",
+   "pair": [
+    "ju3m",
+    "xr7w"
+   ]
+  },
+  {
+   "id": "c069",
+   "item": "i025",
+   "pair": [
+    "vw2m",
+    "3asq"
+   ]
+  },
+  {
+   "id": "c072",
+   "item": "i060",
+   "pair": [
+    "kscn",
+    "pfqn"
+   ]
+  },
+  {
+   "id": "c076",
+   "item": "i058",
+   "pair": [
+    "ud6n",
+    "ztpy"
+   ]
+  },
+  {
+   "id": "c087",
+   "item": "i057",
+   "pair": [
+    "9f7z",
+    "hwhg"
+   ]
+  },
+  {
+   "id": "c093",
+   "item": "i005",
+   "pair": [
+    "trte",
+    "7gdn"
+   ]
+  },
+  {
+   "id": "c102",
+   "item": "i013",
+   "pair": [
+    "nw7h",
+    "sfkw"
+   ]
+  }
+ ]
+}
