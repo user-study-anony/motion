@@ -1,0 +1,201 @@
+{
+ "study": "ustudy-prolific-f1",
+ "version": "f1-b14-v3",
+ "block": 14,
+ "n_blocks": 16,
+ "note": "Formal study f1, block 14 of 16: 10 comparisons. Items and clips are opaque codes.",
+ "items": [
+  {
+   "id": "i004",
+   "kind": "edit",
+   "T": "keep arms always down",
+   "I": "clips/aa356c5c33e730d4.jpg",
+   "R": "clips/587fdf826ca64798.mp4",
+   "clips": {
+    "j858": "clips/41a021b0c4e84901.mp4",
+    "pmqk": "clips/d1834eacda5931a0.mp4"
+   }
+  },
+  {
+   "id": "i006",
+   "kind": "edit",
+   "T": "keep the arms stretched out in front the whole time",
+   "I": "clips/034f802f9bffeaf3.jpg",
+   "R": "clips/b14f78c71c2a6da7.mp4",
+   "clips": {
+    "3643": "clips/7a51292e17f8515a.mp4",
+    "zed8": "clips/680f1694bf265d98.mp4"
+   }
+  },
+  {
+   "id": "i009",
+   "kind": "edit",
+   "T": "keep the arms stretched out in front the whole time",
+   "I": "clips/e364a586e0b1430c.jpg",
+   "R": "clips/7faf379a6482463a.mp4",
+   "clips": {
+    "stan": "clips/3afc8d6f87f166f2.mp4",
+    "k2ba": "clips/407e796d353c0476.mp4"
+   }
+  },
+  {
+   "id": "i027",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping both hands on the hips",
+   "I": "clips/5a5694f4a06f3d2d.jpg",
+   "R": "clips/3a68a3f1735976cc.mp4",
+   "clips": {
+    "kdxy": "clips/9c4567586c05574a.mp4",
+    "h96g": "clips/4c9ed2d5ce4b473c.mp4"
+   }
+  },
+  {
+   "id": "i038",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/009406c69de86250.jpg",
+   "R": "clips/57360b74224b418c.mp4",
+   "clips": {
+    "zcyn": "clips/348d06c135395787.mp4",
+    "g74c": "clips/33de2ea649bb079d.mp4"
+   }
+  },
+  {
+   "id": "i048",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/136129554b827c4f.jpg",
+   "R": "clips/19f0040cecd17f9a.mp4",
+   "clips": {
+    "h5x8": "clips/0a21e7921f5197b0.mp4",
+    "eqkv": "clips/bb9114fba168f36f.mp4"
+   }
+  },
+  {
+   "id": "i051",
+   "kind": "edit",
+   "T": "keep your hands resting on your hips the entire time",
+   "I": "clips/dca871bd7803eb9e.jpg",
+   "R": "clips/8e5298bbed344f43.mp4",
+   "clips": {
+    "3kft": "clips/9607c6e0286a2c4a.mp4",
+    "458k": "clips/39793954c1662594.mp4"
+   }
+  },
+  {
+   "id": "i052",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping both hands on the hips",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/888ad615aa300a52.mp4",
+   "clips": {
+    "ckrz": "clips/184bd15bccd3e333.mp4",
+    "bn95": "clips/1dcc302ae7c21d0d.mp4"
+   }
+  },
+  {
+   "id": "i067",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping both arms stretched straight forward",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/888ad615aa300a52.mp4",
+   "clips": {
+    "5ecg": "clips/912d0b051b2a1dfa.mp4",
+    "t9u4": "clips/abe9b6a48e3cbcd6.mp4"
+   }
+  },
+  {
+   "id": "i080",
+   "kind": "copy",
+   "T": "perform the motion shown in the reference",
+   "I": "clips/340163963a452d1c.jpg",
+   "R": "clips/6d275712543e8385.mp4",
+   "clips": {
+    "yx29": "clips/65cb02eda0aeb4a1.mp4",
+    "tk2r": "clips/869d356979ebeb3d.mp4"
+   }
+  }
+ ],
+ "comparisons": [
+  {
+   "id": "c008",
+   "item": "i038",
+   "pair": [
+    "g74c",
+    "zcyn"
+   ]
+  },
+  {
+   "id": "c025",
+   "item": "i080",
+   "pair": [
+    "tk2r",
+    "yx29"
+   ]
+  },
+  {
+   "id": "c055",
+   "item": "i027",
+   "pair": [
+    "h96g",
+    "kdxy"
+   ]
+  },
+  {
+   "id": "c079",
+   "item": "i052",
+   "pair": [
+    "bn95",
+    "ckrz"
+   ]
+  },
+  {
+   "id": "c097",
+   "item": "i048",
+   "pair": [
+    "h5x8",
+    "eqkv"
+   ]
+  },
+  {
+   "id": "c122",
+   "item": "i004",
+   "pair": [
+    "j858",
+    "pmqk"
+   ]
+  },
+  {
+   "id": "c135",
+   "item": "i051",
+   "pair": [
+    "3kft",
+    "458k"
+   ]
+  },
+  {
+   "id": "c137",
+   "item": "i067",
+   "pair": [
+    "5ecg",
+    "t9u4"
+   ]
+  },
+  {
+   "id": "c143",
+   "item": "i009",
+   "pair": [
+    "stan",
+    "k2ba"
+   ]
+  },
+  {
+   "id": "c148",
+   "item": "i006",
+   "pair": [
+    "zed8",
+    "3643"
+   ]
+  }
+ ]
+}

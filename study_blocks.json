@@ -1,6 +1,6 @@
 {
  "study": "ustudy-prolific-f1",
  "version": "f1",
- "n_blocks": 13,
+ "n_blocks": 16,
  "assignment": "without ?blk=: block = FNV-1a 32-bit hash of the rater id mod n_blocks + 1, remembered per rater; ?blk=<k> overrides"
 }
