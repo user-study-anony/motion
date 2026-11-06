@@ -1,200 +1,200 @@
 {
  "study": "ustudy-prolific-f1",
- "version": "f1-b1-v3",
+ "version": "f1-b1-v4",
  "block": 1,
- "n_blocks": 16,
- "note": "Formal study f1, block 1 of 16: 10 comparisons. Items and clips are opaque codes.",
+ "n_blocks": 14,
+ "note": "Formal study f1, block 1 of 14: 10 comparisons. Items and clips are opaque codes.",
  "items": [
   {
-   "id": "i016",
+   "id": "i005",
+   "kind": "copy",
+   "T": "a person walking forwards",
+   "I": "clips/2f0c85d0de8ab149.jpg",
+   "R": "clips/888ad615aa300a52.mp4",
+   "clips": {
+    "68dy": "clips/2f25778cceee2c4b.mp4",
+    "x73j": "clips/391596db69228e1e.mp4"
+   }
+  },
+  {
+   "id": "i007",
    "kind": "edit",
    "T": "keep your hands resting on your hips the entire time",
    "I": "clips/009406c69de86250.jpg",
-   "R": "clips/57360b74224b418c.mp4",
+   "R": "clips/a9073f34aadcb88d.mp4",
    "clips": {
-    "rv8c": "clips/e3ea92e52d08bd2f.mp4",
-    "af8a": "clips/004046a7ed9843f1.mp4"
+    "3ux8": "clips/db6f78844a130d4b.mp4",
+    "f6ym": "clips/f6978065ac5d5fed.mp4"
    }
   },
   {
-   "id": "i022",
-   "kind": "edit",
-   "T": "keep arms always down",
-   "I": "clips/24c9f3f1c1653be1.jpg",
-   "R": "clips/0761e74714a435e7.mp4",
-   "clips": {
-    "zh2k": "clips/c00ef1879ca76dc8.mp4",
-    "z6mx": "clips/56ae8b2aec710cdf.mp4"
-   }
-  },
-  {
-   "id": "i032",
-   "kind": "edit",
-   "T": "keep your hands resting on your hips the entire time",
-   "I": "clips/4f3dcc38e7a00646.jpg",
-   "R": "clips/a2fcb7bf2a4e964e.mp4",
-   "clips": {
-    "kjvb": "clips/fc4a89e0b659bfc1.mp4",
-    "uq77": "clips/1d43322f686409df.mp4"
-   }
-  },
-  {
-   "id": "i035",
-   "kind": "edit",
-   "T": "a person walking backwards",
-   "I": "clips/5a5694f4a06f3d2d.jpg",
-   "R": "clips/a7b1770967a3c04a.mp4",
-   "clips": {
-    "7aha": "clips/78b3e392518c266b.mp4",
-    "4ha6": "clips/bfbca74db9d5ee43.mp4"
-   }
-  },
-  {
-   "id": "i042",
-   "kind": "edit",
-   "T": "keep the arms stretched out in front the whole time",
-   "I": "clips/24c9f3f1c1653be1.jpg",
-   "R": "clips/0761e74714a435e7.mp4",
-   "clips": {
-    "3rhb": "clips/02038469c6466751.mp4",
-    "c6nt": "clips/c2b37eac9dc01aac.mp4"
-   }
-  },
-  {
-   "id": "i043",
-   "kind": "edit",
-   "T": "Keep hands at chin level all the time.",
-   "I": "clips/5707b261f6c1fd3b.jpg",
-   "R": "clips/0a76d9ea3687c250.mp4",
-   "clips": {
-    "d9yq": "clips/d85f043560fe63bb.mp4",
-    "9xjz": "clips/2a842eb4b448f022.mp4"
-   }
-  },
-  {
-   "id": "i057",
+   "id": "i009",
    "kind": "copy",
    "T": "perform the motion shown in the reference",
-   "I": "clips/3f0ce24725a09986.jpg",
-   "R": "clips/c5e8a64f8c7cf3b4.mp4",
+   "I": "clips/4c8b8d3e472af8f6.jpg",
+   "R": "clips/0761e74714a435e7.mp4",
    "clips": {
-    "fqbb": "clips/61b67002f406d30a.mp4",
-    "6w7g": "clips/0bbc66b829cadaa6.mp4"
+    "cur3": "clips/c4c40adc1fd30bc0.mp4",
+    "uy3c": "clips/5080d2e90c7d0e4d.mp4"
    }
   },
   {
-   "id": "i061",
+   "id": "i017",
    "kind": "edit",
    "T": "keep your hands resting on your hips the entire time",
-   "I": "clips/aa356c5c33e730d4.jpg",
-   "R": "clips/587fdf826ca64798.mp4",
+   "I": "clips/136129554b827c4f.jpg",
+   "R": "clips/19f0040cecd17f9a.mp4",
    "clips": {
-    "pfqn": "clips/e97e220dbd70a4f6.mp4",
-    "kscn": "clips/4669dbbd1f95ceb0.mp4"
+    "h5x8": "clips/eba2a45563eb0c56.mp4",
+    "eqkv": "clips/50417f96473df908.mp4"
    }
   },
   {
-   "id": "i077",
+   "id": "i028",
+   "kind": "edit",
+   "T": "a person walking forwards while keeping both hands on the hips",
+   "I": "clips/5a5694f4a06f3d2d.jpg",
+   "R": "clips/3a68a3f1735976cc.mp4",
+   "clips": {
+    "dztb": "clips/9c4567586c05574a.mp4",
+    "wjfe": "clips/4c9ed2d5ce4b473c.mp4"
+   }
+  },
+  {
+   "id": "i036",
+   "kind": "edit",
+   "T": "keep the arms stretched out in front the whole time",
+   "I": "clips/034f802f9bffeaf3.jpg",
+   "R": "clips/b14f78c71c2a6da7.mp4",
+   "clips": {
+    "zh2k": "clips/7c072e5cfc989fd0.mp4",
+    "z6mx": "clips/7b2db6b15c2a8832.mp4"
+   }
+  },
+  {
+   "id": "i049",
    "kind": "copy",
    "T": "perform the motion shown in the reference",
    "I": "clips/385ce7bac727c742.jpg",
    "R": "clips/802a5ba2250bc338.mp4",
    "clips": {
-    "gxyr": "clips/24df4a44be17adf7.mp4",
-    "3z4q": "clips/41651ebd864c31c8.mp4"
+    "2ggu": "clips/24df4a44be17adf7.mp4",
+    "9yd2": "clips/41651ebd864c31c8.mp4"
    }
   },
   {
-   "id": "i079",
-   "kind": "copy",
-   "T": "perform the motion shown in the reference",
-   "I": "clips/ce3895c91fad8773.jpg",
-   "R": "clips/6821d8de874cfe1c.mp4",
+   "id": "i051",
+   "kind": "edit",
+   "T": "keep arms always down",
+   "I": "clips/24c9f3f1c1653be1.jpg",
+   "R": "clips/0761e74714a435e7.mp4",
    "clips": {
-    "ndhq": "clips/519792bbd55c1190.mp4",
-    "y3r8": "clips/944d3664ed50e840.mp4"
+    "ju3m": "clips/470912c4749f764e.mp4",
+    "xr7w": "clips/c14b43f4d47355dd.mp4"
+   }
+  },
+  {
+   "id": "i062",
+   "kind": "edit",
+   "T": "keep your hands resting on your hips the entire time",
+   "I": "clips/aa356c5c33e730d4.jpg",
+   "R": "clips/587fdf826ca64798.mp4",
+   "clips": {
+    "jkjj": "clips/669b5b768dbe6502.mp4",
+    "pem9": "clips/8bfc9e90e002db54.mp4"
+   }
+  },
+  {
+   "id": "i063",
+   "kind": "edit",
+   "T": "Keep hands at chin level all the time.",
+   "I": "clips/5707b261f6c1fd3b.jpg",
+   "R": "clips/0a76d9ea3687c250.mp4",
+   "clips": {
+    "f42c": "clips/350b008dae9dbe41.mp4",
+    "6ka7": "clips/36b496fe20282bbd.mp4"
    }
   }
  ],
  "comparisons": [
   {
-   "id": "c015",
-   "item": "i079",
+   "id": "c005",
+   "item": "i007",
    "pair": [
-    "ndhq",
-    "y3r8"
+    "3ux8",
+    "f6ym"
    ]
   },
   {
-   "id": "c039",
-   "item": "i043",
+   "id": "c034",
+   "item": "i049",
    "pair": [
-    "9xjz",
-    "d9yq"
+    "9yd2",
+    "2ggu"
    ]
   },
   {
-   "id": "c048",
-   "item": "i057",
+   "id": "c044",
+   "item": "i062",
    "pair": [
-    "6w7g",
-    "fqbb"
+    "jkjj",
+    "pem9"
    ]
   },
   {
-   "id": "c054",
-   "item": "i035",
+   "id": "c053",
+   "item": "i051",
    "pair": [
-    "4ha6",
-    "7aha"
+    "ju3m",
+    "xr7w"
    ]
   },
   {
-   "id": "c068",
-   "item": "i077",
+   "id": "c065",
+   "item": "i063",
    "pair": [
-    "gxyr",
-    "3z4q"
-   ]
-  },
-  {
-   "id": "c072",
-   "item": "i061",
-   "pair": [
-    "pfqn",
-    "kscn"
-   ]
-  },
-  {
-   "id": "c086",
-   "item": "i032",
-   "pair": [
-    "uq77",
-    "kjvb"
+    "6ka7",
+    "f42c"
    ]
   },
   {
    "id": "c090",
-   "item": "i022",
+   "item": "i036",
    "pair": [
-    "zh2k",
-    "z6mx"
+    "z6mx",
+    "zh2k"
    ]
   },
   {
-   "id": "c114",
-   "item": "i042",
+   "id": "c097",
+   "item": "i017",
    "pair": [
-    "3rhb",
-    "c6nt"
+    "h5x8",
+    "eqkv"
    ]
   },
   {
-   "id": "c124",
-   "item": "i016",
+   "id": "c101",
+   "item": "i028",
    "pair": [
-    "af8a",
-    "rv8c"
+    "wjfe",
+    "dztb"
+   ]
+  },
+  {
+   "id": "c112",
+   "item": "i009",
+   "pair": [
+    "uy3c",
+    "cur3"
+   ]
+  },
+  {
+   "id": "c130",
+   "item": "i005",
+   "pair": [
+    "68dy",
+    "x73j"
    ]
   }
  ]
