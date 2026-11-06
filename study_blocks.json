@@ -2,5 +2,22 @@
  "study": "ustudy-prolific-f1",
  "version": "f1",
  "n_blocks": 14,
- "assignment": "without ?blk=: block = FNV-1a 32-bit hash of the rater id mod n_blocks + 1, remembered per rater; ?blk=<k> overrides"
+ "assignment": "without ?blk=: a new rater gets a block by the FNV-1a 32-bit hash of the rater id over weighted slots (weights = raters each block still needs, owner 2026-11-06; all-zero or missing weights = hash mod n_blocks + 1); remembered per rater; ?blk=<k> overrides",
+ "weights": [
+  2,
+  5,
+  5,
+  4,
+  0,
+  1,
+  3,
+  4,
+  3,
+  4,
+  6,
+  4,
+  3,
+  2
+ ],
+ "weights_version": "w1"
 }

@@ -105,12 +105,17 @@ async function resolveBlock(rid) {
     } else {
         const r = await fetch('study_blocks.json', { cache: 'no-cache' });
         if (!r.ok) { throw new Error('HTTP ' + r.status + ' (study_blocks.json)'); }
-        const K = (await r.json()).n_blocks;
+        const meta = await r.json(), K = meta.n_blocks;
         if (!Number.isInteger(K) || K < 1) { throw new Error('no block count in study_blocks.json'); }
+        // owner 11/06: new raters go preferentially to blocks that still need raters: integer weights in study_blocks.json
+        // (remaining need per block); the rater-id hash picks a weighted slot, so a reload or a returning rater keeps the same block.
+        const W = Array.isArray(meta.weights) && meta.weights.length === K && meta.weights.every(x => Number.isInteger(x) && x >= 0) ? meta.weights : null;
+        const WT = W ? W.reduce((a, b) => a + b, 0) : 0;
         const saved = parseInt(safeGet('blk:' + rid) || '', 10);
-        BLOCK = (saved >= 1 && saved <= K) ? saved : (fnv1a(rid) % K) + 1;
-        BLOCK_SOURCE = 'auto';
-        safeSet('blk:' + rid, String(BLOCK));
+        if (saved >= 1 && saved <= K) { BLOCK = saved; BLOCK_SOURCE = safeGet('blks:' + rid) || 'auto'; }
+        else if (WT > 0) { let u = fnv1a(rid) % WT; BLOCK = K; for (let k = 0; k < K; k++) { if (u < W[k]) { BLOCK = k + 1; break; } u -= W[k]; } BLOCK_SOURCE = 'auto-' + (meta.weights_version || 'w'); }
+        else { BLOCK = (fnv1a(rid) % K) + 1; BLOCK_SOURCE = 'auto'; }
+        safeSet('blk:' + rid, String(BLOCK)); safeSet('blks:' + rid, BLOCK_SOURCE);
     }
     DATA_FILE = 'study_data_b' + BLOCK + '.json';
     return true;
